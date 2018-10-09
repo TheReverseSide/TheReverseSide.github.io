@@ -1,3 +1,4 @@
+<pre>
 # This is my portfolio containing games I am developing, game assets, and other design work.
 
 
@@ -8,3 +9,11 @@
 
 ## Title TBD: Attention-cultivating game
 **An ongoing project attempting to provide a brief meditative break by providing haptic feedback**
+
+
+
+
+
+
+
+</pre>
