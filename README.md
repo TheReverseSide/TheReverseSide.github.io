@@ -2,6 +2,7 @@
 <hr>
 <br>
 
+<font color="red">This is some text!</font>
 # Current projects:
 <br>
 
