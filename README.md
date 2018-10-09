@@ -2,7 +2,7 @@
 <hr>
 <br>
 
-<font color="red">This is some text!</font>
+<span style="color:blue">some *This is Blue italic.* text</span>
 # Current projects:
 <br>
 
