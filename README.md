@@ -1,5 +1,5 @@
-# <pre> This is my portfolio containing games I am developing, game assets, and other design work. </pre>
-
+### This is my portfolio containing games I am developing, game assets, and other design work.
+&npsp; &npsp; &npsp; &npsp; &npsp; &npsp; &npsp; &npsp; &npsp; &npsp; &npsp; &npsp; &npsp; 
 
 # Current projects:
 
