@@ -1,4 +1,4 @@
-## This is my portfolio containing games I am developing, game assets, and other design work.
+# This is my portfolio containing games I am developing, game assets, and other design work.
 
 
 # Current projects:
