@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 locale                   : "en-US"
 title                    : "Brandon Startz"
 title_separator          : "-"
-name                     : "Brandon Startz"
+name                     : ""
 description              : "Design portfolio"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -102,7 +102,7 @@ analytics:
 # Site Author
 author:
   name             : "Brandon Startz"
-  avatar           : /Users/startz/Documents/myFace.jpg
+  avatar           : MacintoshHD/Users/startz/Documents/myFace.jpg
   bio              : "Design portfolio"
   location         : "Helsinki"
   email            : "brandon.startz@helsinki.fi"
@@ -121,7 +121,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/TheReverseSide"
+      url: "https://github.com/TheReverseSide"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
@@ -289,7 +289,7 @@ defaults:
       share: true
       related: true
 
-  # _posts
+  # _pages
   - scope:
       path: ""
       type: pages
