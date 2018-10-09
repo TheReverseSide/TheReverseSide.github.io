@@ -1,6 +1,6 @@
 ### This is my portfolio containing games I am developing, game assets, and other design work.
 <hr>
-
+<br>
 
 # Current projects:
 
