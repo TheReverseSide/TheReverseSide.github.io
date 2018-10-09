@@ -1,6 +1,7 @@
 ### This is my portfolio containing games I am developing, game assets, and other design work.
-&npsp &npsp; &npsp; &npsp; &npsp; &npsp; &npsp; &npsp; &npsp; &npsp; &npsp; &npsp; &npsp; 
 
+<hr>&npsp &npsp; &npsp; &npsp; &npsp; &npsp; &npsp; &npsp; &npsp; &npsp; &npsp; &npsp; &npsp; 
+<hr>
 # Current projects:
 
 ## Title TBD: Neurogame
