@@ -1,8 +1,6 @@
 ### This is my portfolio containing games I am developing, game assets, and other design work.
 <hr>
 <br>
-
-<span style="color:blue">some *This is Blue italic.* text</span>
 # Current projects:
 <br>
 
