@@ -276,11 +276,11 @@ compress_html:
 
 
 # Defaults
-#defaults:
-#  _posts
+defaults:
+  # _posts
   - scope:
       path: ""
-    type: posts
+      type: posts
     values:
       layout: single
       author_profile: true
@@ -288,6 +288,7 @@ compress_html:
       comments: # true
       share: true
       related: true
+
 
   # _pages
   - scope:
