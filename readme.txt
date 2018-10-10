@@ -1,91 +1,69 @@
-/*========= About Theme =========*/
+==================================================================================================
 
-Theme Name: Shapely
-Theme URI: https://colorlib.com/wp/shapely/
-Version: 1.1.0
-Tested up to: WP 4.7
+DESCRIPTION:
 
-Author: Aigars Silkalns
-Author URI: https://colorlib.com/wp/
-License: GNU General Public License v3.0
-License URI: http://www.gnu.org/licenses/gpl.html
--------------------------------------------------------
-Shapely theme, Copyright 2017 colorlib.com
-Shapely WordPress theme is distributed under the terms of the GNU GPL
-Shapely is based on Underscores http://underscores.me/, (C) 2012-2017 Automattic, Inc.
--------------------------------------------------------
+GLINT is a modern and stylish digital agency HTML template. Designed for creative designers, agencies
+freelancers, photographer or any creative profession. It is fully responsive and retina/hi-dpi ready
+making it pixel sharp on any devices. It has animating stats section, working contact form, 
+stylish portfolio section and other features you will only find on premium html templates. 
+Built with clean and organized code, this template is very easy to customize.
 
-== Description ==
-
-Shapely is a powerful and versatile one page WordPress theme with pixel perfect design and outstanding functionality. It is by far the most advanced free WordPress theme available today with loads of unmatched customization options. This theme comes with several homepage widgets that can be used to add portfolio, testimonials, parallax sections, your product or service information, call for action and much more.
-
-Shapely supports most free and premium WordPress plugins such as WooCommerce, Jetpack, Gravity Forms, Contact Form 7, Yoast SEO, Google Analytics by Yoast and much more.
-
-This theme is the best suited for business, landing page, portfolio, ecommerce, store, local business,  personal websites but can be tweaked to be used as blog, magazine or any other awesome website while highlighting its unique one page setup. This is going to be the last WordPress theme you will ever want to use because it is so much better than anything you have seen. We promise.
-
-== Installation ==
-
-1. In your admin panel, go to Appearance > Themes and click the Add New button.
-2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
-3. Click Activate to use your new theme right away.
-
-For more detailed Shapely theme setup please read documentation: https://colorlib.com/wp/support/shapely/
-
-== Frequently Asked Questions ==
-
-= Does this theme support any plugins? =
-
-Shapely includes support for Infinite Scroll, Portfolio, Testimonials, Tiled Galleries for Jetpack.
-
-= Long menus =
-
-Shapely theme does not support long menus.
-
-= Front page template not displaying content =
-
-This page template is used to create the Parallax homepage from our demo : https://colorlib.com/shapely/ . it does not output any content added in the backend editor and we recommend using only the [Shapely] tagged widgets. 
-
-== Credits ==
-
-* Based on Underscores http://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
-* normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2017 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
-* TGM Plugin Activation - http://tgmpluginactivation.com/, 2011, Thomas Griffin [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
-* Bootstrap v3.3.6 (http://getbootstrap.com), Copyright 2011-2014 Twitter, Inc. Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-* Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
-	License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
-* WP-Bootstrap-NavWalker licensed under the GPLv2 license (http://www.gnu.org/licenses/gpl-2.0.html)
-* FlexSlider by WooThemes licensed under the GPLv2 license (http://www.gnu.org/licenses/gpl-2.0.html)
-* jQuery Smooth Scroll, https://github.com/kswedberg/jquery-smooth-scroll. Copyright (c) 2015 Karl Swedberg. Licensed MIT(https://github.com/kswedberg/jquery-smooth-scroll/blob/master/LICENSE-MIT)
-* jQuery Cloneya, Lisensed under [MIT](http://opensource.org/licenses/MIT)
+==================================================================================================
 
 
-== Changelog ==
+USING THE MAILCHIMP FORM:
 
-= 1.1.0 - Jan 3 2017 =
+To use the mailchimp form you need a mailchimp url. To get the mailchimp url, login to 
+your mailchimp account, click the list menu, click the stats download menu and select signup forms. 
+Then choose embedded forms and select naked form. In the generated form code get the value of 
+the form ACTION attribute and use it as your mailchimp url. Open the main.js file located
+in the template's "js" folder and look for this line of code: 
 
-* Major upgrade to comply with WordPress.org guidelines and best practices.
+var cfg = {
+    scrollDuration : 800, // smoothscroll duration
+    mailChimpURL   : 'https://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e6957d85dc'   // mailchimp url
+},
 
-= 1.0.5 - Sept 3 2016 =
+Replace the value of mailChimpURL with your mailchimp url.
 
-* Improved theme translation
 
-= 1.0.4 - Sept 3 2016 =
+SOURCES AND CREDITS:
 
-* Removed deprecated tags
+I've used the following resources as listed.
 
-= 1.0.3 - Sept 3 2016 =
+Fonts:
+ - Montserrat Font (https://www.google.com/fonts/specimen/Montserrat)
+ - Lora Font (https://fonts.google.com/specimen/Lora)
 
-* Small bug fixes and improvements
+Icons:
+ - Font Awesome (http://fortawesome.github.io/Font-Awesome/)
+ - Micons Free Icons (http://geticonjar.com/freebies/231-micons/)
+ - Webfont generated by ICOMOON (https://icomoon.io/)
 
-= 1.0.2 - April 15 2016 =
+Stock Photos and Graphics:
+ - Unsplash.com (https://unsplash.com/)
+ - gratisography (https://gratisography.com/)
+ 
+Javascript Files:
 
-* Fixed parse error for older version of PHP.
-* Fixed error when mobile menu was appearing along regular menu between 990px - 991px.
+ - JQuery (http://jquery.com/)
+ - Modernizr (http://modernizr.com/)
+ - Waypoints (http://imakewebthings.com/jquery-waypoints/)
+ - jQuery Placeholder (https://github.com/mathiasbynens/jquery-placeholder)
+ - jQuery Validation Plugin (https://jqueryvalidation.org/)
+ - pace js (http://github.hubspot.com/pace/)
+ - Masonry (http://masonry.desandro.com/)
+ - Imagesloaded (https://imagesloaded.desandro.com/)
+ - Parallax.js (http://pixelcog.github.io/parallax.js/)
+ - Slick Slider (http://kenwheeler.github.io/slick/)
+ - Photoswipe (http://photoswipe.com/)
+ - Animate On Scroll (https://michalsnik.github.io/aos/)
+ - AjaxChimp (https://github.com/scdoshi/jquery-ajaxchimp)
 
-= 1.0.1 - March 30 2016 =
 
-* Renamed JavaScript file to get rid of not found error.
-* Updated Smooth Scroll to 1.7.2
+-------------------------------------------------------------------------------------------------------
 
-= 1.0.0 - March 26 2016 =
-* Initial release
+
+
+
+
