@@ -1025,6 +1025,13 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  *	</aside>
  *
  * --------------------------------------------------------------------- */
+ .centerPhoto {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 50%;
+ }
+
 
 .pull-quote {
     position: relative;
@@ -1306,8 +1313,9 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 .section-header {
     text-align: center;
     position: relative;
-    margin-bottom: 3.6rem;
+    margin-bottom: 0rem;
     max-width: 960px;
+    height: 15px;
 }
 
 .section-header.has-bottom-sep {
@@ -1320,7 +1328,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     display: inline-block;
     height: 1px;
     width: 550px;
-    background-color: rgba(0, 0, 0, 0.1);
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -1811,7 +1818,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .home-content__main {
-    padding-top: 24rem;
+    padding-top: 15rem;
     position: relative;
 }
 
@@ -2226,9 +2233,10 @@ html.no-csstransitions .home-content__main {
 .column-courses {
     float: left;
     text-align: center;
+    background-color: #385636;
     width: 33.33%;
     padding: 10px;
-    height: 300px;
+    height: 500px;
 }
 
 .column-wide {

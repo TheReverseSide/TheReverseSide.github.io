@@ -392,6 +392,8 @@ h2.right-title ~ p {
     text-align: center;
     float: left;
     max-width: 300px;
+    text-align: left;
+    line-height: 20px;
     padding: 0px;
     margin-left: 10%;
     vertical-align: middle;
@@ -406,45 +408,6 @@ h2.right-title ~ p {
     overflow: hidden;
 }
 /* END OF about */
-/* skills */
-
-.hrs {
-    max-width: 500px;
-    background: transparent;
-    border: 0;
-    border-bottom: 1px solid #ddd;
-}
-.skills-col {
-    max-width: 1100px;
-    padding-top: 30px;
-    display: block;
-    margin: auto;
-    text-align: center;
-    /*background-color: #2b2e3b;*/
-}
-.skill-sec div {
-    display: inline-block;
-    padding: 3px 20px;
-}
-.skill-img {
-    transition: all 0.3s ease;
-/*    -webkit-filter: grayscale(100%);
-    -o-filter: grayscale(100%);
-    filter: grayscale(100%);
-    filter: gray;*/
-}
-.skill-img:hover {
-    /*-webkit-filter: none;
-    -o-filter: none;
-    filter: none;
-    filter: none;*/
-    transform: scale(1.1);
-    transition-duration: 0.2s;
-}
-.skill-img + p {
-    font-weight: 300;
-    color: #74b1be;
-}
 .col-inline {
     display: inline-block;
 }
@@ -502,22 +465,6 @@ h2.right-title ~ p {
 .container:hover .bot {
 	border-radius: 0;
 }
-.lccfs {
-    background: url("../images/portfolio/bfp1.PNG") no-repeat center;
-    transition: all 0.3s ease;
-    background-size: cover;
-}
-.container:hover .lccfs {
-	transform:  scale(1.1);
-}
-.gogon {
-    background: url("../images/portfolio/gogon1.PNG") no-repeat center;
-    transition: all 0.3s ease;
-    background-size: cover;
-}
-.container:hover .gogon {
-	transform:  scale(1.1);
-}
 .phage {
     background: url("../images/NeuroGameArt/Full-Example.jpg") no-repeat center;
     transition: all 0.3s ease;
@@ -526,7 +473,7 @@ h2.right-title ~ p {
 .container:hover .phage {
 	transform:  scale(1.1);
 }
-.inventory {
+/* .inventory {
     background: url("../images/portfolio/crud1.PNG") no-repeat center;
     transition: all 0.3s ease;
     background-size: cover;
@@ -550,6 +497,7 @@ h2.right-title ~ p {
 .container:hover .presidents {
 	transform:  scale(1.1);
 }
+*/
 .overlay-1 {
     background-color: #f39c12;
     opacity: 0.8;
@@ -679,10 +627,10 @@ h1.contact-white, .contact div > p {
 }
 
 footer {
-    height: 100%;
+    height: 15%;
     text-align: center;
+    position: absolute;
     background-color: #000000;
-    background-image:
 }
 footer > p {
     padding: 0 15px;
@@ -730,9 +678,6 @@ footer ul li a:hover {
 .underlined:hover {
     color: #47c0da;
 }
-.redpanda {
-    color: #e74c3c;
-}
 .extra {
     width: 100%;
     height: 100%;
@@ -747,9 +692,6 @@ p.nav-extra {
     text-transform: uppercase;
     font-size: 150%;
     padding-bottom: 50px;
-}
-p.lccfs-extra {
-    color: #f39c12;
 }
 /* PORTFOLIO MODALS */
 .nav-overlay {
