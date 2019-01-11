@@ -357,7 +357,7 @@ div .about-col {
     overflow: hidden;
 }
 h2.left-title {
-    padding-bottom: 20px;
+    padding-bottom: 0px;
     font-weight: 300;
 }
 h2.right-title {
@@ -389,13 +389,13 @@ h2.right-title ~ p {
     margin-bottom: -20px;
 }
 .about1 {
-    text-align: center;
+    text-align: justify;
     float: left;
     max-width: 300px;
     text-align: left;
     line-height: 20px;
-    padding: 0px;
-    margin-left: 10%;
+    padding: 5px;
+    margin-left: 8%;
     vertical-align: middle;
 }
 .about2 p {
