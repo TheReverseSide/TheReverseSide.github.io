@@ -1223,19 +1223,19 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     font-family: "montserrat-medium", sans-serif;
     font-size: 7.8rem;
     line-height: 1.25;
-    color: #000000;
+    color: #2F2F2F;
     margin-top: 0;
 }
 
 .display-1--light {
-    color: #FFFFFF;
+    color: #2F2F2F;
 }
 
 .display-2 {
     font-family: "montserrat-medium", sans-serif;
     font-size: 5.2rem;
     line-height: 1.25;
-    color: #000000;
+    color: #2F2F2F;
     margin-top: 0;
 }
 
@@ -1253,7 +1253,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     line-height: 1.333;
     text-transform: uppercase;
     letter-spacing: .25rem;
-    color: #39b54a;
+    color: silver;
     margin-top: 100;
     margin-bottom: 0;
 }
@@ -2241,9 +2241,18 @@ html.no-csstransitions .home-content__main {
 
 .column-wide {
     float: left;
+    text-align: right;
     width: 50%;
     padding: 10px;
     height: 450px;
+}
+
+.column-progress {
+    float: center;
+    text-align: center;
+    width: 50%;
+    padding: 70px;
+    height: 350px;
 }
 
 /* Clear floats after the columns */

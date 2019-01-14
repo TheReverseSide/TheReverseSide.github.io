@@ -888,8 +888,8 @@ p.phage-extra {
 }
 .phage-intro {
     background-color: #385636;
+    max-width: 350px:
     text-align: justify;
-    text-align: center;
 }
 .intro div.phage-circle {
     border: 10px solid ##385636;
