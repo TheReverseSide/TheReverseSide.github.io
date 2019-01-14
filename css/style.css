@@ -450,11 +450,11 @@ h2.right-title ~ p {
     border-top-left-radius: 5px;
 }
 .overflower {
-    position: absolute;
+    position: center;
     top: 0;
     bottom: 0;
     right: 0;
-    left: 0;
+    left: 50%;
     width: 100%;
     height: 250px;
     background-size: cover;
