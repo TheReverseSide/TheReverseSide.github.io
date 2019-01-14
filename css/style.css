@@ -421,8 +421,10 @@ h2.right-title ~ p {
 }
 .container {
     position: relative;
-    display: inline-block;
+    left: 500px;
+    display: block;
     max-width: 350px;
+    transform-origin: center;
     width: 350px;
     height: 350px;
     margin: 30px;

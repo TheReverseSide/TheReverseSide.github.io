@@ -2247,12 +2247,20 @@ html.no-csstransitions .home-content__main {
     height: 450px;
 }
 
+.column-wide-leftalign {
+    float: left;
+    text-align: left;
+    width: 50%;
+    padding: 10px;
+    height: 450px;
+}
+
 .column-progress {
-    float: center;
+    float: left;
     text-align: center;
     width: 50%;
-    padding: 70px;
-    height: 350px;
+    padding: 10px;
+    height: 450px;
 }
 
 /* Clear floats after the columns */
