@@ -472,6 +472,12 @@ h2.right-title ~ p {
     transition: all 0.3s ease;
     background-size: cover;
 }
+
+.wtbg {
+    background: url("../images/WTBG/ggj19_logoshot.png") no-repeat center;
+    transition: all 0.3s ease;
+    background-size: cover;
+}
 .container:hover .phage {
 	transform:  scale(1.1);
 }
