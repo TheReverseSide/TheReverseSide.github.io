@@ -33,8 +33,7 @@
 </head>
 
 <body id="top">
-  <!-- header
-      ================================================== -->
+  <!-- header ================================================== -->
   <header class="s-header">
     <nav class="header-nav">
       <a href="#0" class="header-nav__close" title="close"><span>Close</span></a>
@@ -45,11 +44,11 @@
         <ul class="header-nav__list">
           <li class="current"><a class="smoothscroll" href="#home" title="home">Home</a></li>
           <li><a class="smoothscroll" href="#about" title="about">About</a></li>
-          <li><a class="smoothscroll" href="#Games" title="works">Games</a></li>
-          <li><a class="smoothscroll" href="#GameAssets" title="works">Game Assets</a></li>
+          <li><a class="smoothscroll" href="#GamesAndProjects" title="works">Games</a></li>
+          <!-- <li><a class="smoothscroll" href="#GameAssets" title="works">Game Assets</a></li> -->
           <!-- <li><a class="smoothscroll" href="#UIapps" title="works">UI and applications</a></li> -->
         </ul>
-        <!-- <p>This is header text <a href='#0'>emphasis</a> This is more header text</p> todo: do I want to put anything here? --->
+        <!-- <p>This is header text <a href='#0'>emphasis</a> This is more header text</p>--->
         <ul class="header-nav__social">
           <li>
             <a href="mailto:brandon.startz@gmail.com"><i class="fa fa-envelope" style="color:white" aria-hidden="true"></i><span></span></a></a> <!-- Find icon -->
@@ -99,12 +98,12 @@
           <a href="index.html#about" class="smoothscroll btn btn--stroke">
             About
           </a>
-          <a href="#Games" class="smoothscroll btn btn--stroke">
+          <a href="#GamesAndProjects" class="smoothscroll btn btn--stroke">
             Games
           </a>
-          <a href="#GameAssets" class="smoothscroll btn btn--stroke">
+          <!-- <a href="#GameAssets" class="smoothscroll btn btn--stroke">
             Game Assets
-          </a>
+          </a> -->
           <!-- <a href="#UIapps" class="smoothscroll btn btn--stroke">
             UI + apps
           </a> -->
@@ -899,6 +898,7 @@ Mention how many unique sounds I have put in
       </div>
     </div>
   </section>
+  
   <!-- ProjectTwo -->
   <section id='WTBGPopup'>
     <div class="portfolio" id="portfolio">
@@ -1059,11 +1059,11 @@ Mention how many unique sounds I have put in
           <font color="#1B1B1B">Agents Light</font>
         </h2>
         <p class="lead">
-          <font color="#1B1B1B">A game jam from GMTK. You only have one way to detect the enemies, use it wisely."</font>
+          <font color="#1B1B1B">A game jam from GMTK. You only have one way to detect the enemies, use it wisely.</font>
         </p>
       </div>
     </div>
-    <div class="container wow bounceInUp" data-wow-delay=".3s" data-wow-duration="1.5s" onclick="navWtbaOpen()">
+    <div class="container wow bounceInUp" data-wow-delay=".3s" data-wow-duration="1.5s" onclick="navAGTLGHTOpen()">
       <div class="overflower">
         <div class="bot wtbg"></div>
       </div>
@@ -1315,10 +1315,17 @@ Mention how many unique sounds I have put in
       $("body").addClass("overflo");
     }
 
+    function navAGTLGHTOpen() {
+      document.getElementById("agtlght-nav").style.width = "100%";
+      $("body").addClass("overflo");
+    }
+    
+
     function closeNav() {
       document.getElementById("lccfs-nav").style.width = "0%";
       document.getElementById("phage-nav").style.width = "0%";
       document.getElementById("wtba-nav").style.width = "0%";
+      document.getElementById("agtlght-nav").style.width = "0%";
       $("body").removeClass("overflo");
     }
 
