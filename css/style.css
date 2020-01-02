@@ -478,6 +478,37 @@ h2.right-title ~ p {
     transition: all 0.3s ease;
     background-size: cover;
 }
+
+.agent_light {
+    background: url("../images/") no-repeat center;
+    transition: all 0.3s ease;
+    background-size: cover;
+}
+
+.escap {
+    background: url("../images/") no-repeat center;
+    transition: all 0.3s ease;
+    background-size: cover;
+}
+
+.archie {
+    background: url("../images/") no-repeat center;
+    transition: all 0.3s ease;
+    background-size: cover;
+}
+
+.cell_splitter {
+    background: url("../images/") no-repeat center;
+    transition: all 0.3s ease;
+    background-size: cover;
+}
+
+.ml_besiege {
+    background: url("../images/") no-repeat center;
+    transition: all 0.3s ease;
+    background-size: cover;
+}
+
 .container:hover .phage {
 	transform:  scale(1.1);
 }
