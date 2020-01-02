@@ -39,7 +39,7 @@
         <ul class="header-nav__list">
           <li class="current"><a class="smoothscroll" href="#home" title="home">Home</a></li>
           <li><a class="smoothscroll" href="#about" title="about">About</a></li>
-          <li><a class="smoothscroll" href="#GamesAndProjects" title="works">Games</a></li>
+          <li><a class="smoothscroll" href="#GamesAndProjects" title="works">Games and projects</a></li>
         </ul>
         <ul class="header-nav__social">
           <li>
@@ -185,9 +185,10 @@
           <h1 class="head"></h1>
           <h1 class="display-2">
             <font color="silver">Games</font>
-          </h1>
+          </h1> 
+          //TODO: It would be ncie if these were links to those games
           <p> <font color="silver">NeuroDefense</font> </p>
-          <p> <font color="silver">Where The Birds Are</font> </p>>
+          <p> <font color="silver">Where The Birds Are</font> </p>
           <p> <font color="silver">Agents Light</font> </p>
           <p> <font color="silver">Escape pod escape</font> </p>
           <p> <font color="silver">Archimedes and the siege of Syracuse</font> </p>
@@ -577,8 +578,8 @@
     function closeNav() {
       document.getElementById("lccfs-nav").style.width = "0%";
       document.getElementById("phage-nav").style.width = "0%";
-      document.getElementById("wtba-nav").style.width = "0%";
-      document.getElementById("agtlght-nav").style.width = "0%";
+      // document.getElementById("wtba-nav").style.width = "0%";
+      // document.getElementById("agtlght-nav").style.width = "0%";
       $("body").removeClass("overflo");
     }
 
@@ -587,8 +588,8 @@
       if (esc.keyCode == 27) {
         document.getElementById("lccfs-nav").style.width = "0%";
         document.getElementById("phage-nav").style.width = "0%";
-        document.getElementById("wtba-nav").style.width = "0%";
-        document.getElementById("agtlght-nav").style.width = "0%";
+        // document.getElementById("wtba-nav").style.width = "0%";
+        // document.getElementById("agtlght-nav").style.width = "0%";
         $("body").removeClass("overflo");
       }
     });
