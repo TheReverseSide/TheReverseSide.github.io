@@ -303,7 +303,7 @@ a.nav::after {
   transition: width 0.2s;
 }
 a.nav:hover::after {
-  wi
+    width: 100%;
 }
 
 /*div.header-banner {
@@ -474,37 +474,38 @@ h2.right-title ~ p {
 }
 
 .wtbg {
-    background: url("../images/WTBG/ggj19_logoshot.png") no-repeat center;
+    background: url("../images/WTBG/ggj19_logoshot.png") 
+    no-repeat center; /* Should this be here? it is in NG */
     transition: all 0.3s ease;
     background-size: cover;
 }
 
 .agent_light {
-    background: url("../images/") no-repeat center;
+    background: url("../images/AGLT/agt_light.png") no-repeat center;
     transition: all 0.3s ease;
     background-size: cover;
 }
 
 .escap {
-    background: url("../images/") no-repeat center;
+    background: url("../images/Intell_escape/Intell_VR.jpg") no-repeat center;
     transition: all 0.3s ease;
     background-size: cover;
 }
 
 .archie {
-    background: url("../images/") no-repeat center;
+    background: url("../images/Archie/syracuse.jpg") no-repeat center;
     transition: all 0.3s ease;
     background-size: cover;
 }
 
 .cell_splitter {
-    background: url("../images/") no-repeat center;
+    background: url("../images/L44_Splitter/ludum_44.jpg") no-repeat center;
     transition: all 0.3s ease;
     background-size: cover;
 }
 
 .ml_besiege {
-    background: url("../images/") no-repeat center;
+    background: url("../images/BesiegeML/Besiege.png") no-repeat center;
     transition: all 0.3s ease;
     background-size: cover;
 }
@@ -638,7 +639,7 @@ div.bot > h1::after {
 .container ul > li.phage3:last-child {
     margin-left: 47.1%;
 }
-}
+
 h1.contact-white {
     font-size: 250%;
 }
@@ -927,11 +928,11 @@ p.phage-extra {
 }
 .phage-intro {
     background-color: #385636;
-    max-width: 350px:
+    /* max-width: 350px; */
     text-align: justify;
 }
 .intro div.phage-circle {
-    border: 10px solid ##385636;
+    border: 10px solid #385636;
     background: #385636;
 }
 .fa-trophy {
