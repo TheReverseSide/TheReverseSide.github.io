@@ -193,6 +193,7 @@
             <font color="silver">Games and projects</font>
           </h1>          
           <!-- <a class="smoothscroll" href="#NeuroGame_tab" title="works"><p> <font color="silver">NeuroDefense</font> </p></a> -->
+          <a class="smoothscroll" href="#BB_tab" title="works"><p> <font color="silver">Battle Beetles</font> </p></a>
           <a class="smoothscroll" href="#WTBG_tab" title="works"><p> <font color="silver">Where The Birds Are</font> </p></a>
           <a class="smoothscroll" href="#AGLHT_tab" title="works"><p> <font color="silver">Agents Light</font> </p></a>
           <a class="smoothscroll" href="#Escape_tab" title="works"><p> <font color="silver">Escape pod VR</font> </p></a>
@@ -728,8 +729,6 @@
     </div>
   </section>
   <!-- ================= END OF AGENTS LIGHT =================-->
-
-
 
   <!--- ESCAPE TAB --->
   <section id='Escape_tab' class="s-works">
@@ -1279,8 +1278,6 @@
   </section>
   <!-- ================= END OF BESIEGE =================-->
 
-
-
   <!-- ABOUT CONTINUED - MOOCS ================================================== -->
   <section id='about' class="s-about">
     <div class="row section-header">
@@ -1366,6 +1363,11 @@
       $("body").addClass("overflo");
     }*/
 
+    function navBBOpen() {
+      document.getElementById("bb-nav").style.width = "100%";
+      $("body").addClass("overflo");
+    }
+
     function navWtbaOpen() {
       document.getElementById("wtba-nav").style.width = "100%";
       $("body").addClass("overflo");
@@ -1397,6 +1399,7 @@
     }
 
     function closeNav() {
+      document.getElementById("bb-nav").style.width = "0%";
       document.getElementById("lccfs-nav").style.width = "0%";
       //document.getElementById("phage-nav").style.width = "0%";
       document.getElementById("wtba-nav").style.width = "0%";
@@ -1411,6 +1414,7 @@
     //ESC TRIGGER FUNCTION
     $("body").keydown(function(esc) {
       if (esc.keyCode == 27) {
+        document.getElementById("bb-nav").style.width = "0%";
         document.getElementById("lccfs-nav").style.width = "0%";
         //document.getElementById("phage-nav").style.width = "0%";
         document.getElementById("wtba-nav").style.width = "0%";
