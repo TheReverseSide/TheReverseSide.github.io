@@ -473,6 +473,13 @@ h2.right-title ~ p {
     background-size: cover;
 }
 
+.bb {
+    background: url("../images/BattleBeetles/BB_main") 
+    no-repeat center; /* Should this be here? it is in NG */
+    transition: all 0.3s ease;
+    background-size: cover;
+}
+
 .wtbg {
     background: url("../images/WTBG/ggj19_logoshot.png") 
     no-repeat center; /* Should this be here? it is in NG */
