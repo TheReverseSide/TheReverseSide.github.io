@@ -474,8 +474,7 @@ h2.right-title ~ p {
 }
 
 .bb {
-    background: url("../images/BattleBeetles/BB_main") 
-    no-repeat center; /* Should this be here? it is in NG */
+    background: url("../images/BattleBeetles/BB_main.png") no-repeat center;
     transition: all 0.3s ease;
     background-size: cover;
 }
