@@ -439,9 +439,9 @@
                 new s.a("#typed", {
                     stringsElement: "#typed-strings",
                     typeSpeed: 35,
-                    backSpeed: 8,
-                    loop: !0,
-                    loopCount: 1 / 0
+                    backSpeed: 100,
+                    loop: 0,
+                    loopCount: 0
                 })
             }
 
