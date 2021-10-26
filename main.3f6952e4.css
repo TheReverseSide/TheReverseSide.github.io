@@ -5937,7 +5937,8 @@ textarea {
     padding: 2rem 5rem;
     position: relative;
     width: 80%;
-    margin: -10em auto 20px
+    margin: -10em auto 20px;
+    box-shadow: 0 4px 8px 0 grey;
 }
 
 @media (max-width:992px) {
@@ -5956,7 +5957,8 @@ textarea {
 }
 
 .black-image-project-hover {
-    display: block
+    display: block;
+    box-shadow: 0 4px 8px 0 grey;
 }
 
 .black-image-project-hover img {
