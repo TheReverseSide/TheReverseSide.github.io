@@ -2454,16 +2454,16 @@ input[type=radio][disabled] {
     grid-template-columns: auto auto;
     align-items: center;
     justify-items: center; /* adjusted */
-    /* background-color: #33f321; */
-    padding-left: 35px;
-    padding-right: 35px;
+    /*background-color: #33f321;*/
+    padding-left: 10%;
+    padding-right: 10%;
     padding-top: 50px;
     padding-bottom: 50px;
   }
 
 .grid-item {
     display:flex;
-    /* background-color: rgba(255, 255, 255, 0.8); */
+    /*background-color: rgba(255, 255, 255, 0.8);*/
     padding: 20px;
     justify-content: center;
     align-items: center;
