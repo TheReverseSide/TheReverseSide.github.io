@@ -2451,6 +2451,7 @@ input[type=radio][disabled] {
 
 .grid-container {
     display: grid;
+    position: relative;
     grid-template-columns: auto auto;
     align-items: center;
     justify-items: center; /* adjusted */
@@ -6201,5 +6202,60 @@ textarea {
     float: left;
     margin-right: 5px
 }
+
+.zoomable {
+    
+}
+
+.zoomable img {
+    transition: all 0.3s ease-out;
+    box-shadow: 0 2px 4px 0 grey;
+}
+
+.zoomable img:hover {
+    /* filter: ; */
+    transform: scale(1.05);
+}
+
+.modal{
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease-out;
+}
+
+.modal.open{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal p {
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    bottom: .5%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+}
+
+.full-img {
+    position: absolute;
+    height: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    
+}
+
+.full-img.open{
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 0.3s ease-out;
+}
+
 
 /*# sourceMappingURL=main.70a66962.map*/
