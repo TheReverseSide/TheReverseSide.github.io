@@ -6212,8 +6212,8 @@ textarea {
 }
 
 .nav>li>a {
-    font-size: 14px;
-    font-weight: 300;
+    font-size: 18px;
+    font-weight: 400;
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear
