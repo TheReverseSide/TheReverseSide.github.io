@@ -3308,7 +3308,7 @@ fieldset[disabled] .btn-link {
 
 .btn-link:focus,
 .btn-link:hover {
-    color: #0012b3;
+    color: darkgreen;
     text-decoration: underline;
     background-color: transparent
 }
@@ -5417,7 +5417,7 @@ button.close {
     background: none;
     left: auto;
     width: 32px;
-    color: #1763e9;
+    color: darkgreen;
     text-shadow: none;
     opacity: 1;
     top: 55px;
@@ -5432,7 +5432,7 @@ button.close {
 
 .carousel-control:focus,
 .carousel-control:hover {
-    color: #1763e9
+    color: darkgreen
 }
 
 .carousel-control.right {
