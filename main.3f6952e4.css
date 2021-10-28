@@ -6046,6 +6046,7 @@ textarea {
     position: relative;
     width: 80%;
     margin: -10em auto 20px;
+    box-shadow: 0 4px 8px 0 grey;
 }
 
 @media (max-width:992px) {
