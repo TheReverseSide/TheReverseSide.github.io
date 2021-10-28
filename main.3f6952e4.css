@@ -6323,4 +6323,10 @@ textarea {
     font-size:1.7rem;
 }
 
+.embedded-video{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+	padding-top: 2%;
+}
 /*# sourceMappingURL=main.70a66962.map*/
