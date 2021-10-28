@@ -1,32 +1,3 @@
-const modal = document.querySelector(".modal");
-const previews = document.querySelectorAll(".zoomable img");
-const original = document.querySelector(".full-img");
-const imgText = document.querySelector(".caption");
-
-previews.forEach((preview) => {
-    preview.addEventListener('click', () => {
-        modal.classList.add('open');
-        original.classList.add('open');
-
-        //Dynamic change text and image
-        const originalSrc = preview.getAttribute("data-original");
-        original.src = originalSrc;
-
-        const altText = preview.alt;
-        caption.textContent = altText;
-    });
-});
-
-modal.addEventListener('click', (e)=>{
-    if(e.target.classList.contains("modal")){
-        modal.classList.remove("open");
-        original.classList.remove("open");
-    }
-});
-
-
-
-
 ! function (t) {
     function e(i) {
         if (n[i]) return n[i].exports;
@@ -4719,5 +4690,31 @@ modal.addEventListener('click', (e)=>{
                 })
             }(t)
         }).call(e, n("juYr"))
+    }
+});
+
+const modal = document.querySelector(".modal");
+const previews = document.querySelectorAll(".zoomable img");
+const original = document.querySelector(".full-img");
+const imgText = document.querySelector(".caption");
+
+previews.forEach((preview) => {
+    preview.addEventListener('click', () => {
+        modal.classList.add('open');
+        original.classList.add('open');
+
+        //Dynamic change text and image
+        const originalSrc = preview.getAttribute("data-original");
+        original.src = originalSrc;
+
+        const altText = preview.alt;
+        caption.textContent = altText;
+    });
+});
+
+modal.addEventListener('click', (e)=>{
+    if(e.target.classList.contains("modal")){
+        modal.classList.remove("open");
+        original.classList.remove("open");
     }
 });
