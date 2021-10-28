@@ -339,7 +339,7 @@ textarea {
 }
 
 a {
-    color: #001aff;
+    color: darkgreen;
     text-decoration: none
 }
 
@@ -612,12 +612,12 @@ mark {
 }
 
 .text-primary {
-    color: #001aff
+    color: darkgreen
 }
 
 a.text-primary:focus,
 a.text-primary:hover {
-    color: #0015cc
+    color: darkgreen
 }
 
 .text-success {
@@ -658,12 +658,12 @@ a.text-danger:hover {
 
 .bg-primary {
     color: #fff;
-    background-color: #001aff
+    background-color: darkgreen
 }
 
 a.bg-primary:focus,
 a.bg-primary:hover {
-    background-color: #0015cc
+    background-color: darkgreen
 }
 
 .bg-success,
@@ -2980,14 +2980,14 @@ fieldset[disabled] .btn-default:hover {
 }
 
 .btn-primary {
-    color: #001aff;
+    color: darkgreen;
     background-color: transparent;
-    border-color: #001aff
+    border-color: darkgreen
 }
 
 .btn-primary.focus,
 .btn-primary:focus {
-    color: #001aff;
+    color: darkgreen;
     background-color: transparent;
     border-color: #000d80
 }
@@ -2996,9 +2996,9 @@ fieldset[disabled] .btn-default:hover {
 .btn-primary:active,
 .btn-primary:hover,
 .open>.btn-primary.dropdown-toggle {
-    color: #001aff;
+    color: darkgreen;
     background-color: transparent;
-    border-color: #0014c2
+    border-color: darkgreen
 }
 
 .btn-primary.active.focus,
@@ -3010,9 +3010,9 @@ fieldset[disabled] .btn-default:hover {
 .open>.btn-primary.dropdown-toggle.focus,
 .open>.btn-primary.dropdown-toggle:focus,
 .open>.btn-primary.dropdown-toggle:hover {
-    color: #001aff;
+    color: darkgreen;
     background-color: transparent;
-    border-color: #000d80
+    border-color: darkslategray
 }
 
 .btn-primary.active,
@@ -3031,12 +3031,12 @@ fieldset[disabled] .btn-primary.focus,
 fieldset[disabled] .btn-primary:focus,
 fieldset[disabled] .btn-primary:hover {
     background-color: transparent;
-    border-color: #001aff
+    border-color: darkgreen
 }
 
 .btn-primary .badge {
     color: transparent;
-    background-color: #001aff
+    background-color: darkgreen
 }
 
 .btn-success {
@@ -3283,7 +3283,7 @@ fieldset[disabled] .btn-danger:hover {
 }
 
 .btn-link {
-    color: #001aff;
+    color: darkgreen;
     font-weight: 400;
     border-radius: 0
 }
@@ -3476,7 +3476,7 @@ tbody.collapse.in {
     color: #fff;
     text-decoration: none;
     outline: 0;
-    background-color: #001aff
+    background-color: darkgreen
 }
 
 .dropdown-menu>.disabled>a,
@@ -3972,7 +3972,7 @@ tbody.collapse.in {
 .nav .open>a:focus,
 .nav .open>a:hover {
     background-color: transparent;
-    border-color: #001aff
+    border-color: darkgreen
 }
 
 .nav .nav-divider {
@@ -4032,7 +4032,7 @@ tbody.collapse.in {
 .nav-pills>li.active>a:focus,
 .nav-pills>li.active>a:hover {
     color: #fff;
-    background-color: #001aff
+    background-color: darkgreen
 }
 
 .nav-stacked>li {
@@ -4824,12 +4824,12 @@ a.label:hover {
 }
 
 .label-primary {
-    background-color: #001aff
+    background-color: darkgreen
 }
 
 .label-primary[href]:focus,
 .label-primary[href]:hover {
-    background-color: #0015cc
+    background-color: darkgreen
 }
 
 .label-success {
@@ -4900,7 +4900,7 @@ a.label:hover {
 
 .list-group-item.active>.badge,
 .nav-pills>.active>a>.badge {
-    color: #001aff;
+    color: darkgreen;
     background-color: #fff
 }
 
@@ -5096,7 +5096,6 @@ button.close {
 .carousel-inner>.item>a>img,
 .carousel-inner>.item>img {
     display: block;
-    max-width: 100%;
     height: auto;
     line-height: 1
 }
@@ -5186,6 +5185,7 @@ button.close {
     opacity: .5;
     filter: alpha(opacity=50);
     font-size: 20px;
+    color: #fff;
     text-align: center;
     text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
     background-color: transparent
@@ -5224,6 +5224,7 @@ button.close {
 .carousel-control .icon-prev {
     position: absolute;
     top: 50%;
+    color: darkgreen;
     margin-top: -10px;
     z-index: 5;
     display: inline-block
@@ -5232,12 +5233,14 @@ button.close {
 .carousel-control .glyphicon-chevron-left,
 .carousel-control .icon-prev {
     left: 50%;
+    color: darkgreen;
     margin-left: -10px
 }
 
 .carousel-control .glyphicon-chevron-right,
 .carousel-control .icon-next {
     right: 50%;
+    color: darkgreen;
     margin-right: -10px
 }
 
@@ -5278,7 +5281,7 @@ button.close {
     border: 1px solid #fff;
     border-radius: 10px;
     cursor: pointer;
-    background-color: #0009;
+    background-color: #000\9;
     background-color: transparent
 }
 
@@ -5315,16 +5318,19 @@ button.close {
         width: 30px;
         height: 30px;
         margin-top: -10px;
+        color: darkgreen;
         font-size: 30px
     }
 
     .carousel-control .glyphicon-chevron-left,
     .carousel-control .icon-prev {
-        margin-left: -10px
+        margin-left: -10px;
+        color: darkgreen;
     }
 
     .carousel-control .glyphicon-chevron-right,
     .carousel-control .icon-next {
+        color: darkgreen;
         margin-right: -10px
     }
 
@@ -5337,6 +5343,104 @@ button.close {
     .carousel-indicators {
         bottom: 20px
     }
+}
+
+.carousel-fade .carousel-inner .item {
+    transition-property: opacity
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right,
+.carousel-fade .carousel-inner .item {
+    opacity: 0
+}
+
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+    opacity: 1
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right,
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev {
+    left: 0;
+    transform: translateZ(0)
+}
+
+.carousel-fade .carousel-control {
+    z-index: 2
+}
+
+.carousel-inner {
+    overflow: inherit
+}
+
+.carousel-inner>.item>a>img,
+.carousel-inner>.item>img {
+    max-width: 100%
+}
+
+@media (min-width:992px) {
+
+    .carousel-inner>.item>a>img,
+    .carousel-inner>.item>img {
+        max-width: 80%
+    }
+}
+
+.carousel-caption {
+    color: #838383;
+    text-shadow: none;
+    position: relative;
+    background-color: #fff;
+    padding: 3rem;
+    text-align: left;
+    left: inherit;
+    right: inherit;
+    bottom: inherit
+}
+
+@media (min-width:992px) {
+    .carousel-caption {
+        padding: 5rem;
+        margin-top: -20%;
+        margin-left: 40%
+    }
+}
+
+.carousel-control {
+    height: 32px;
+    background: none;
+    left: auto;
+    width: 32px;
+    color: #1763e9;
+    text-shadow: none;
+    opacity: 1;
+    top: 55px;
+    right: 5rem
+}
+
+@media (min-width:992px) {
+    .carousel-control {
+        top: 75px
+    }
+}
+
+.carousel-control:focus,
+.carousel-control:hover {
+    color: #1763e9
+}
+
+.carousel-control.right {
+    right: 5rem;
+    background-image: none
+}
+
+.carousel-control.left {
+    margin-right: 32px;
+    background-image: none
 }
 
 .clearfix:after,
@@ -5781,8 +5885,8 @@ body.minimal {
 .btn-primary:focus,
 .btn-primary:hover {
     color: #fff;
-    border-color: #001aff;
-    background-color: #001aff
+    border-color: darkgreen;
+    background-color: darkgreen
 }
 
 .btn-info:focus,
@@ -5977,60 +6081,6 @@ textarea {
 @media (max-width:992px) {
     .black-image-project-hover img {
         filter: none
-    }
-}
-
-@media (max-width:768px) {
-    .projects-carousel .carousel-control {
-        display: none
-    }
-
-    .projects-carousel .carousel-inner>.item {
-        display: block
-    }
-}
-
-.carousel-control {
-    top: 50%;
-    bottom: auto;
-    width: 50px;
-    height: 50px;
-    margin-top: -25px;
-    border: 1px solid #000;
-    background-color: #000;
-    font-size: 30px;
-    color: #fff;
-    line-height: 44px;
-    text-shadow: none;
-    opacity: 1
-}
-
-.carousel-control:hover {
-    color: #fff;
-    background-color: #000;
-    opacity: .8
-}
-
-.carousel-control.left,
-.carousel-control.right {
-    background-image: none
-}
-
-.carousel-control.right {
-    right: -25px
-}
-
-.carousel-control.left {
-    left: -25px
-}
-
-@media (max-width:992px) {
-    .carousel-control.right {
-        right: -12px
-    }
-
-    .carousel-control.left {
-        left: -12px
     }
 }
 
