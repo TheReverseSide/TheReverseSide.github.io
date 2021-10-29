@@ -5921,9 +5921,9 @@ body.minimal {
 
 body,
 p {
-    font-weight: 300;
+    font-weight: 375;
     letter-spacing: .8px;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     line-height: 25px
 }
 
@@ -6226,7 +6226,7 @@ textarea {
 }
 
 .nav.navbar-small>li>a {
-    font-size: 11px
+    font-size: 13px
 }
 
 .template-example {
