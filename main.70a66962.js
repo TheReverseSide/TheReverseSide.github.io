@@ -4693,6 +4693,34 @@
     }
 });
 
+
+const modal = document.querySelector(".modal");
+const previews = document.querySelectorAll(".zoomable img");
+const original = document.querySelector(".full-img");
+const imgText = document.querySelector(".caption");
+
+previews.forEach((preview) => {
+    preview.addEventListener('click', () => {
+        modal.classList.add('open');
+        original.classList.add('open');
+
+        //Dynamic change text and image
+        const originalSrc = preview.getAttribute("data-original");
+        original.src = originalSrc;
+
+        const altText = preview.alt;
+        caption.textContent = altText;
+    });
+});
+
+modal.addEventListener('click', (e)=>{
+    if(e.target.classList.contains("modal")){
+        modal.classList.remove("open");
+        original.classList.remove("open");
+    }
+});
+
+
 ! function (t) {
     function e(i) {
         if (n[i]) return n[i].exports;
@@ -5279,20 +5307,6 @@
     I1N7: function (t, e, n) {
         t.exports = n.p + "assets/images/profil-01.jpg"
     },
-    JkW7: function (t, e, n) {
-        "use strict";
-        Object.defineProperty(e, "__esModule", {
-            value: !0
-        });
-        var i = (n("PExH"), n("juYr"), n("6wzU"), n("e9iq"), n("aWFY"));
-        ! function (t) {
-            t.keys().map(t)
-        }(n("pax0")), Object.assign(window, {
-            navbarFixedTopAnimation: i.b,
-            scrollRevelation: i.c,
-            navActivePage: i.a
-        })
-    },
     Kz47: function (t, e, n) {
         t.exports = n.p + "assets/images/logo-03.png"
     },
@@ -5427,43 +5441,6 @@
     ZVF2: function (t, e, n) {
         t.exports = n.p + "assets/images/js.png"
     },
-    aWFY: function (t, e, n) {
-        "use strict";
-        (function (t) {
-            function i() {
-                var e = 0;
-                t(".navbar-default").removeClass("active").addClass("navbar-fixed-top"), t(document).scroll(function () {
-                    if ((e = t(this).scrollTop()) > 440) t(".navbar-default").addClass("active");
-                    else {
-                        if (t(".navbar-default").hasClass("home") && t(".navbar-collapse").hasClass("in")) return;
-                        t(".navbar-default").removeClass("active")
-                    }
-                }), t(".navbar-toggle").click(function (n) {
-                    t(".navbar-default").hasClass("active") ? t(".navbar-default").hasClass("home") && e < 440 && t(".navbar-default").removeClass("active") : t(".navbar-default").addClass("active home")
-                }), t(window).resize(function () {
-                    var e = window.innerWidth;
-                    t(".navbar-default").hasClass("home") && t(".navbar-collapse").hasClass("in") && (e > 767 ? t(".navbar-default").removeClass("active") : t(".navbar-default").addClass("active"))
-                })
-            }
-
-            function o(t) {
-                window.sr = new a.a, sr.reveal(t, 200)
-            }
-
-            function r() {
-                t('nav li a[href=".' + location.pathname + '"]').addClass("active"), "/" == location.pathname && t('nav li a[href="./index.html"]').addClass("active")
-            }
-            n.d(e, "b", function () {
-                return i
-            }), n.d(e, "c", function () {
-                return o
-            }), n.d(e, "a", function () {
-                return r
-            });
-            var s = n("3Zw6"),
-                a = n.n(s)
-        }).call(e, n("juYr"))
-    },
     e9iq: function (t, e, n) {
         (function (t) {
             + function (t) {
@@ -5547,147 +5524,6 @@
                 }, t(function () {
                     (new e).listen()
                 })
-            }(t)
-        }).call(e, n("juYr"))
-    },
-    gnpq: function (t, e, n) {
-        (function (t) {
-            + function (t) {
-                "use strict";
-
-                function e(n, i) {
-                    this.$body = t(document.body), this.$scrollElement = t(t(n).is(document.body) ? window : n), this.options = t.extend({}, e.DEFAULTS, i), this.selector = (this.options.target || "") + " .nav li > a", this.offsets = [], this.targets = [], this.activeTarget = null, this.scrollHeight = 0, this.$scrollElement.on("scroll.bs.scrollspy", t.proxy(this.process, this)), this.refresh(), this.process()
-                }
-
-                function n(n) {
-                    return this.each(function () {
-                        var i = t(this),
-                            o = i.data("bs.scrollspy"),
-                            r = "object" == typeof n && n;
-                        o || i.data("bs.scrollspy", o = new e(this, r)), "string" == typeof n && o[n]()
-                    })
-                }
-                e.VERSION = "3.3.7", e.DEFAULTS = {
-                    offset: 10
-                }, e.prototype.getScrollHeight = function () {
-                    return this.$scrollElement[0].scrollHeight || Math.max(this.$body[0].scrollHeight, document.documentElement.scrollHeight)
-                }, e.prototype.refresh = function () {
-                    var e = this,
-                        n = "offset",
-                        i = 0;
-                    this.offsets = [], this.targets = [], this.scrollHeight = this.getScrollHeight(), t.isWindow(this.$scrollElement[0]) || (n = "position", i = this.$scrollElement.scrollTop()), this.$body.find(this.selector).map(function () {
-                        var e = t(this),
-                            o = e.data("target") || e.attr("href"),
-                            r = /^#./.test(o) && t(o);
-                        return r && r.length && r.is(":visible") && [
-                            [r[n]().top + i, o]
-                        ] || null
-                    }).sort(function (t, e) {
-                        return t[0] - e[0]
-                    }).each(function () {
-                        e.offsets.push(this[0]), e.targets.push(this[1])
-                    })
-                }, e.prototype.process = function () {
-                    var t, e = this.$scrollElement.scrollTop() + this.options.offset,
-                        n = this.getScrollHeight(),
-                        i = this.options.offset + n - this.$scrollElement.height(),
-                        o = this.offsets,
-                        r = this.targets,
-                        s = this.activeTarget;
-                    if (this.scrollHeight != n && this.refresh(), e >= i) return s != (t = r[r.length - 1]) && this.activate(t);
-                    if (s && e < o[0]) return this.activeTarget = null, this.clear();
-                    for (t = o.length; t--;) s != r[t] && e >= o[t] && (void 0 === o[t + 1] || e < o[t + 1]) && this.activate(r[t])
-                }, e.prototype.activate = function (e) {
-                    this.activeTarget = e, this.clear();
-                    var n = this.selector + '[data-target="' + e + '"],' + this.selector + '[href="' + e + '"]',
-                        i = t(n).parents("li").addClass("active");
-                    i.parent(".dropdown-menu").length && (i = i.closest("li.dropdown").addClass("active")), i.trigger("activate.bs.scrollspy")
-                }, e.prototype.clear = function () {
-                    t(this.selector).parentsUntil(this.options.target, ".active").removeClass("active")
-                };
-                var i = t.fn.scrollspy;
-                t.fn.scrollspy = n, t.fn.scrollspy.Constructor = e, t.fn.scrollspy.noConflict = function () {
-                    return t.fn.scrollspy = i, this
-                }, t(window).on("load.bs.scrollspy.data-api", function () {
-                    t('[data-spy="scroll"]').each(function () {
-                        var e = t(this);
-                        n.call(e, e.data())
-                    })
-                })
-            }(t)
-        }).call(e, n("juYr"))
-    },
-    hxo1: function (t, e, n) {
-        (function (t) {
-            + function (t) {
-                "use strict";
-
-                function e(e) {
-                    var n = e.attr("data-target");
-                    n || (n = e.attr("href"), n = n && /#[A-Za-z]/.test(n) && n.replace(/.*(?=#[^\s]*$)/, ""));
-                    var i = n && t(n);
-                    return i && i.length ? i : e.parent()
-                }
-
-                function n(n) {
-                    n && 3 === n.which || (t(o).remove(), t(r).each(function () {
-                        var i = t(this),
-                            o = e(i),
-                            r = {
-                                relatedTarget: this
-                            };
-                        o.hasClass("open") && (n && "click" == n.type && /input|textarea/i.test(n.target.tagName) && t.contains(o[0], n.target) || (o.trigger(n = t.Event("hide.bs.dropdown", r)), n.isDefaultPrevented() || (i.attr("aria-expanded", "false"), o.removeClass("open").trigger(t.Event("hidden.bs.dropdown", r)))))
-                    }))
-                }
-
-                function i(e) {
-                    return this.each(function () {
-                        var n = t(this),
-                            i = n.data("bs.dropdown");
-                        i || n.data("bs.dropdown", i = new s(this)), "string" == typeof e && i[e].call(n)
-                    })
-                }
-                var o = ".dropdown-backdrop",
-                    r = '[data-toggle="dropdown"]',
-                    s = function (e) {
-                        t(e).on("click.bs.dropdown", this.toggle)
-                    };
-                s.VERSION = "3.3.7", s.prototype.toggle = function (i) {
-                    var o = t(this);
-                    if (!o.is(".disabled, :disabled")) {
-                        var r = e(o),
-                            s = r.hasClass("open");
-                        if (n(), !s) {
-                            "ontouchstart" in document.documentElement && !r.closest(".navbar-nav").length && t(document.createElement("div")).addClass("dropdown-backdrop").insertAfter(t(this)).on("click", n);
-                            var a = {
-                                relatedTarget: this
-                            };
-                            if (r.trigger(i = t.Event("show.bs.dropdown", a)), i.isDefaultPrevented()) return;
-                            o.trigger("focus").attr("aria-expanded", "true"), r.toggleClass("open").trigger(t.Event("shown.bs.dropdown", a))
-                        }
-                        return !1
-                    }
-                }, s.prototype.keydown = function (n) {
-                    if (/(38|40|27|32)/.test(n.which) && !/input|textarea/i.test(n.target.tagName)) {
-                        var i = t(this);
-                        if (n.preventDefault(), n.stopPropagation(), !i.is(".disabled, :disabled")) {
-                            var o = e(i),
-                                s = o.hasClass("open");
-                            if (!s && 27 != n.which || s && 27 == n.which) return 27 == n.which && o.find(r).trigger("focus"), i.trigger("click");
-                            var a = o.find(".dropdown-menu li:not(.disabled):visible a");
-                            if (a.length) {
-                                var l = a.index(n.target);
-                                38 == n.which && l > 0 && l--, 40 == n.which && l < a.length - 1 && l++, ~l || (l = 0), a.eq(l).trigger("focus")
-                            }
-                        }
-                    }
-                };
-                var a = t.fn.dropdown;
-                t.fn.dropdown = i, t.fn.dropdown.Constructor = s, t.fn.dropdown.noConflict = function () {
-                    return t.fn.dropdown = a, this
-                }, t(document).on("click.bs.dropdown.data-api", n).on("click.bs.dropdown.data-api", ".dropdown form", function (t) {
-                    t.stopPropagation()
-                }).on("click.bs.dropdown.data-api", r, s.prototype.toggle).on("keydown.bs.dropdown.data-api", r, s.prototype.keydown).on("keydown.bs.dropdown.data-api", ".dropdown-menu", s.prototype.keydown)
             }(t)
         }).call(e, n("juYr"))
     },
@@ -8852,264 +8688,8 @@
     lIgk: function (t, e, n) {
         t.exports = n.p + "assets/images/img-05.jpg"
     },
-    laCn: function (t, e, n) {
-        (function (t) {
-            + function (t) {
-                "use strict";
-
-                function e(e) {
-                    var n, i = e.attr("data-target") || (n = e.attr("href")) && n.replace(/.*(?=#[^\s]+$)/, "");
-                    return t(i)
-                }
-
-                function n(e) {
-                    return this.each(function () {
-                        var n = t(this),
-                            o = n.data("bs.collapse"),
-                            r = t.extend({}, i.DEFAULTS, n.data(), "object" == typeof e && e);
-                        !o && r.toggle && /show|hide/.test(e) && (r.toggle = !1), o || n.data("bs.collapse", o = new i(this, r)), "string" == typeof e && o[e]()
-                    })
-                }
-                var i = function (e, n) {
-                    this.$element = t(e), this.options = t.extend({}, i.DEFAULTS, n), this.$trigger = t('[data-toggle="collapse"][href="#' + e.id + '"],[data-toggle="collapse"][data-target="#' + e.id + '"]'), this.transitioning = null, this.options.parent ? this.$parent = this.getParent() : this.addAriaAndCollapsedClass(this.$element, this.$trigger), this.options.toggle && this.toggle()
-                };
-                i.VERSION = "3.3.7", i.TRANSITION_DURATION = 350, i.DEFAULTS = {
-                    toggle: !0
-                }, i.prototype.dimension = function () {
-                    return this.$element.hasClass("width") ? "width" : "height"
-                }, i.prototype.show = function () {
-                    if (!this.transitioning && !this.$element.hasClass("in")) {
-                        var e, o = this.$parent && this.$parent.children(".panel").children(".in, .collapsing");
-                        if (!(o && o.length && (e = o.data("bs.collapse")) && e.transitioning)) {
-                            var r = t.Event("show.bs.collapse");
-                            if (this.$element.trigger(r), !r.isDefaultPrevented()) {
-                                o && o.length && (n.call(o, "hide"), e || o.data("bs.collapse", null));
-                                var s = this.dimension();
-                                this.$element.removeClass("collapse").addClass("collapsing")[s](0).attr("aria-expanded", !0), this.$trigger.removeClass("collapsed").attr("aria-expanded", !0), this.transitioning = 1;
-                                var a = function () {
-                                    this.$element.removeClass("collapsing").addClass("collapse in")[s](""), this.transitioning = 0, this.$element.trigger("shown.bs.collapse")
-                                };
-                                if (!t.support.transition) return a.call(this);
-                                var l = t.camelCase(["scroll", s].join("-"));
-                                this.$element.one("bsTransitionEnd", t.proxy(a, this)).emulateTransitionEnd(i.TRANSITION_DURATION)[s](this.$element[0][l])
-                            }
-                        }
-                    }
-                }, i.prototype.hide = function () {
-                    if (!this.transitioning && this.$element.hasClass("in")) {
-                        var e = t.Event("hide.bs.collapse");
-                        if (this.$element.trigger(e), !e.isDefaultPrevented()) {
-                            var n = this.dimension();
-                            this.$element[n](this.$element[n]())[0].offsetHeight, this.$element.addClass("collapsing").removeClass("collapse in").attr("aria-expanded", !1), this.$trigger.addClass("collapsed").attr("aria-expanded", !1), this.transitioning = 1;
-                            var o = function () {
-                                this.transitioning = 0, this.$element.removeClass("collapsing").addClass("collapse").trigger("hidden.bs.collapse")
-                            };
-                            if (!t.support.transition) return o.call(this);
-                            this.$element[n](0).one("bsTransitionEnd", t.proxy(o, this)).emulateTransitionEnd(i.TRANSITION_DURATION)
-                        }
-                    }
-                }, i.prototype.toggle = function () {
-                    this[this.$element.hasClass("in") ? "hide" : "show"]()
-                }, i.prototype.getParent = function () {
-                    return t(this.options.parent).find('[data-toggle="collapse"][data-parent="' + this.options.parent + '"]').each(t.proxy(function (n, i) {
-                        var o = t(i);
-                        this.addAriaAndCollapsedClass(e(o), o)
-                    }, this)).end()
-                }, i.prototype.addAriaAndCollapsedClass = function (t, e) {
-                    var n = t.hasClass("in");
-                    t.attr("aria-expanded", n), e.toggleClass("collapsed", !n).attr("aria-expanded", n)
-                };
-                var o = t.fn.collapse;
-                t.fn.collapse = n, t.fn.collapse.Constructor = i, t.fn.collapse.noConflict = function () {
-                    return t.fn.collapse = o, this
-                }, t(document).on("click.bs.collapse.data-api", '[data-toggle="collapse"]', function (i) {
-                    var o = t(this);
-                    o.attr("data-target") || i.preventDefault();
-                    var r = e(o),
-                        s = r.data("bs.collapse"),
-                        a = s ? "toggle" : o.data();
-                    n.call(r, a)
-                })
-            }(t)
-        }).call(e, n("juYr"))
-    },
     lwI8: function (t, e, n) {
         t.exports = n.p + "assets/images/logo-01.png"
-    },
-    m5Wh: function (t, e, n) {
-        (function (t) {
-            + function (t) {
-                "use strict";
-
-                function e(e) {
-                    return this.each(function () {
-                        var i = t(this),
-                            o = i.data("bs.button"),
-                            r = "object" == typeof e && e;
-                        o || i.data("bs.button", o = new n(this, r)), "toggle" == e ? o.toggle() : e && o.setState(e)
-                    })
-                }
-                var n = function (e, i) {
-                    this.$element = t(e), this.options = t.extend({}, n.DEFAULTS, i), this.isLoading = !1
-                };
-                n.VERSION = "3.3.7", n.DEFAULTS = {
-                    loadingText: "loading..."
-                }, n.prototype.setState = function (e) {
-                    var n = "disabled",
-                        i = this.$element,
-                        o = i.is("input") ? "val" : "html",
-                        r = i.data();
-                    e += "Text", null == r.resetText && i.data("resetText", i[o]()), setTimeout(t.proxy(function () {
-                        i[o](null == r[e] ? this.options[e] : r[e]), "loadingText" == e ? (this.isLoading = !0, i.addClass(n).attr(n, n).prop(n, !0)) : this.isLoading && (this.isLoading = !1, i.removeClass(n).removeAttr(n).prop(n, !1))
-                    }, this), 0)
-                }, n.prototype.toggle = function () {
-                    var t = !0,
-                        e = this.$element.closest('[data-toggle="buttons"]');
-                    if (e.length) {
-                        var n = this.$element.find("input");
-                        "radio" == n.prop("type") ? (n.prop("checked") && (t = !1), e.find(".active").removeClass("active"), this.$element.addClass("active")) : "checkbox" == n.prop("type") && (n.prop("checked") !== this.$element.hasClass("active") && (t = !1), this.$element.toggleClass("active")), n.prop("checked", this.$element.hasClass("active")), t && n.trigger("change")
-                    } else this.$element.attr("aria-pressed", !this.$element.hasClass("active")), this.$element.toggleClass("active")
-                };
-                var i = t.fn.button;
-                t.fn.button = e, t.fn.button.Constructor = n, t.fn.button.noConflict = function () {
-                    return t.fn.button = i, this
-                }, t(document).on("click.bs.button.data-api", '[data-toggle^="button"]', function (n) {
-                    var i = t(n.target).closest(".btn");
-                    e.call(i, "toggle"), t(n.target).is('input[type="radio"], input[type="checkbox"]') || (n.preventDefault(), i.is("input,button") ? i.trigger("focus") : i.find("input:visible,button:visible").first().trigger("focus"))
-                }).on("focus.bs.button.data-api blur.bs.button.data-api", '[data-toggle^="button"]', function (e) {
-                    t(e.target).closest(".btn").toggleClass("focus", /^focus(in)?$/.test(e.type))
-                })
-            }(t)
-        }).call(e, n("juYr"))
-    },
-    mEQU: function (t, e, n) {
-        (function (t) {
-            + function (t) {
-                "use strict";
-
-                function e(e, i) {
-                    return this.each(function () {
-                        var o = t(this),
-                            r = o.data("bs.modal"),
-                            s = t.extend({}, n.DEFAULTS, o.data(), "object" == typeof e && e);
-                        r || o.data("bs.modal", r = new n(this, s)), "string" == typeof e ? r[e](i) : s.show && r.show(i)
-                    })
-                }
-                var n = function (e, n) {
-                    this.options = n, this.$body = t(document.body), this.$element = t(e), this.$dialog = this.$element.find(".modal-dialog"), this.$backdrop = null, this.isShown = null, this.originalBodyPad = null, this.scrollbarWidth = 0, this.ignoreBackdropClick = !1, this.options.remote && this.$element.find(".modal-content").load(this.options.remote, t.proxy(function () {
-                        this.$element.trigger("loaded.bs.modal")
-                    }, this))
-                };
-                n.VERSION = "3.3.7", n.TRANSITION_DURATION = 300, n.BACKDROP_TRANSITION_DURATION = 150, n.DEFAULTS = {
-                    backdrop: !0,
-                    keyboard: !0,
-                    show: !0
-                }, n.prototype.toggle = function (t) {
-                    return this.isShown ? this.hide() : this.show(t)
-                }, n.prototype.show = function (e) {
-                    var i = this,
-                        o = t.Event("show.bs.modal", {
-                            relatedTarget: e
-                        });
-                    this.$element.trigger(o), this.isShown || o.isDefaultPrevented() || (this.isShown = !0, this.checkScrollbar(), this.setScrollbar(), this.$body.addClass("modal-open"), this.escape(), this.resize(), this.$element.on("click.dismiss.bs.modal", '[data-dismiss="modal"]', t.proxy(this.hide, this)), this.$dialog.on("mousedown.dismiss.bs.modal", function () {
-                        i.$element.one("mouseup.dismiss.bs.modal", function (e) {
-                            t(e.target).is(i.$element) && (i.ignoreBackdropClick = !0)
-                        })
-                    }), this.backdrop(function () {
-                        var o = t.support.transition && i.$element.hasClass("fade");
-                        i.$element.parent().length || i.$element.appendTo(i.$body), i.$element.show().scrollTop(0), i.adjustDialog(), o && i.$element[0].offsetWidth, i.$element.addClass("in"), i.enforceFocus();
-                        var r = t.Event("shown.bs.modal", {
-                            relatedTarget: e
-                        });
-                        o ? i.$dialog.one("bsTransitionEnd", function () {
-                            i.$element.trigger("focus").trigger(r)
-                        }).emulateTransitionEnd(n.TRANSITION_DURATION) : i.$element.trigger("focus").trigger(r)
-                    }))
-                }, n.prototype.hide = function (e) {
-                    e && e.preventDefault(), e = t.Event("hide.bs.modal"), this.$element.trigger(e), this.isShown && !e.isDefaultPrevented() && (this.isShown = !1, this.escape(), this.resize(), t(document).off("focusin.bs.modal"), this.$element.removeClass("in").off("click.dismiss.bs.modal").off("mouseup.dismiss.bs.modal"), this.$dialog.off("mousedown.dismiss.bs.modal"), t.support.transition && this.$element.hasClass("fade") ? this.$element.one("bsTransitionEnd", t.proxy(this.hideModal, this)).emulateTransitionEnd(n.TRANSITION_DURATION) : this.hideModal())
-                }, n.prototype.enforceFocus = function () {
-                    t(document).off("focusin.bs.modal").on("focusin.bs.modal", t.proxy(function (t) {
-                        document === t.target || this.$element[0] === t.target || this.$element.has(t.target).length || this.$element.trigger("focus")
-                    }, this))
-                }, n.prototype.escape = function () {
-                    this.isShown && this.options.keyboard ? this.$element.on("keydown.dismiss.bs.modal", t.proxy(function (t) {
-                        27 == t.which && this.hide()
-                    }, this)) : this.isShown || this.$element.off("keydown.dismiss.bs.modal")
-                }, n.prototype.resize = function () {
-                    this.isShown ? t(window).on("resize.bs.modal", t.proxy(this.handleUpdate, this)) : t(window).off("resize.bs.modal")
-                }, n.prototype.hideModal = function () {
-                    var t = this;
-                    this.$element.hide(), this.backdrop(function () {
-                        t.$body.removeClass("modal-open"), t.resetAdjustments(), t.resetScrollbar(), t.$element.trigger("hidden.bs.modal")
-                    })
-                }, n.prototype.removeBackdrop = function () {
-                    this.$backdrop && this.$backdrop.remove(), this.$backdrop = null
-                }, n.prototype.backdrop = function (e) {
-                    var i = this,
-                        o = this.$element.hasClass("fade") ? "fade" : "";
-                    if (this.isShown && this.options.backdrop) {
-                        var r = t.support.transition && o;
-                        if (this.$backdrop = t(document.createElement("div")).addClass("modal-backdrop " + o).appendTo(this.$body), this.$element.on("click.dismiss.bs.modal", t.proxy(function (t) {
-                                if (this.ignoreBackdropClick) return void(this.ignoreBackdropClick = !1);
-                                t.target === t.currentTarget && ("static" == this.options.backdrop ? this.$element[0].focus() : this.hide())
-                            }, this)), r && this.$backdrop[0].offsetWidth, this.$backdrop.addClass("in"), !e) return;
-                        r ? this.$backdrop.one("bsTransitionEnd", e).emulateTransitionEnd(n.BACKDROP_TRANSITION_DURATION) : e()
-                    } else if (!this.isShown && this.$backdrop) {
-                        this.$backdrop.removeClass("in");
-                        var s = function () {
-                            i.removeBackdrop(), e && e()
-                        };
-                        t.support.transition && this.$element.hasClass("fade") ? this.$backdrop.one("bsTransitionEnd", s).emulateTransitionEnd(n.BACKDROP_TRANSITION_DURATION) : s()
-                    } else e && e()
-                }, n.prototype.handleUpdate = function () {
-                    this.adjustDialog()
-                }, n.prototype.adjustDialog = function () {
-                    var t = this.$element[0].scrollHeight > document.documentElement.clientHeight;
-                    this.$element.css({
-                        paddingLeft: !this.bodyIsOverflowing && t ? this.scrollbarWidth : "",
-                        paddingRight: this.bodyIsOverflowing && !t ? this.scrollbarWidth : ""
-                    })
-                }, n.prototype.resetAdjustments = function () {
-                    this.$element.css({
-                        paddingLeft: "",
-                        paddingRight: ""
-                    })
-                }, n.prototype.checkScrollbar = function () {
-                    var t = window.innerWidth;
-                    if (!t) {
-                        var e = document.documentElement.getBoundingClientRect();
-                        t = e.right - Math.abs(e.left)
-                    }
-                    this.bodyIsOverflowing = document.body.clientWidth < t, this.scrollbarWidth = this.measureScrollbar()
-                }, n.prototype.setScrollbar = function () {
-                    var t = parseInt(this.$body.css("padding-right") || 0, 10);
-                    this.originalBodyPad = document.body.style.paddingRight || "", this.bodyIsOverflowing && this.$body.css("padding-right", t + this.scrollbarWidth)
-                }, n.prototype.resetScrollbar = function () {
-                    this.$body.css("padding-right", this.originalBodyPad)
-                }, n.prototype.measureScrollbar = function () {
-                    var t = document.createElement("div");
-                    t.className = "modal-scrollbar-measure", this.$body.append(t);
-                    var e = t.offsetWidth - t.clientWidth;
-                    return this.$body[0].removeChild(t), e
-                };
-                var i = t.fn.modal;
-                t.fn.modal = e, t.fn.modal.Constructor = n, t.fn.modal.noConflict = function () {
-                    return t.fn.modal = i, this
-                }, t(document).on("click.bs.modal.data-api", '[data-toggle="modal"]', function (n) {
-                    var i = t(this),
-                        o = i.attr("href"),
-                        r = t(i.attr("data-target") || o && o.replace(/.*(?=#[^\s]+$)/, "")),
-                        s = r.data("bs.modal") ? "toggle" : t.extend({
-                            remote: !/#/.test(o) && o
-                        }, r.data(), i.data());
-                    i.is("a") && n.preventDefault(), r.one("show.bs.modal", function (t) {
-                        t.isDefaultPrevented() || r.one("hidden.bs.modal", function () {
-                            i.is(":visible") && i.trigger("focus")
-                        })
-                    }), e.call(r, s, this)
-                })
-            }(t)
-        }).call(e, n("juYr"))
     },
     oOvE: function (t, e, n) {
         (function (t) {
@@ -9229,65 +8809,6 @@
     slZu: function (t, e, n) {
         t.exports = n.p + "assets/images/wave-left.svg"
     },
-    vQEO: function (t, e, n) {
-        (function (t) {
-            + function (t) {
-                "use strict";
-
-                function e(e) {
-                    return this.each(function () {
-                        var i = t(this),
-                            o = i.data("bs.tab");
-                        o || i.data("bs.tab", o = new n(this)), "string" == typeof e && o[e]()
-                    })
-                }
-                var n = function (e) {
-                    this.element = t(e)
-                };
-                n.VERSION = "3.3.7", n.TRANSITION_DURATION = 150, n.prototype.show = function () {
-                    var e = this.element,
-                        n = e.closest("ul:not(.dropdown-menu)"),
-                        i = e.data("target");
-                    if (i || (i = e.attr("href"), i = i && i.replace(/.*(?=#[^\s]*$)/, "")), !e.parent("li").hasClass("active")) {
-                        var o = n.find(".active:last a"),
-                            r = t.Event("hide.bs.tab", {
-                                relatedTarget: e[0]
-                            }),
-                            s = t.Event("show.bs.tab", {
-                                relatedTarget: o[0]
-                            });
-                        if (o.trigger(r), e.trigger(s), !s.isDefaultPrevented() && !r.isDefaultPrevented()) {
-                            var a = t(i);
-                            this.activate(e.closest("li"), n), this.activate(a, a.parent(), function () {
-                                o.trigger({
-                                    type: "hidden.bs.tab",
-                                    relatedTarget: e[0]
-                                }), e.trigger({
-                                    type: "shown.bs.tab",
-                                    relatedTarget: o[0]
-                                })
-                            })
-                        }
-                    }
-                }, n.prototype.activate = function (e, i, o) {
-                    function r() {
-                        s.removeClass("active").find("> .dropdown-menu > .active").removeClass("active").end().find('[data-toggle="tab"]').attr("aria-expanded", !1), e.addClass("active").find('[data-toggle="tab"]').attr("aria-expanded", !0), a ? (e[0].offsetWidth, e.addClass("in")) : e.removeClass("fade"), e.parent(".dropdown-menu").length && e.closest("li.dropdown").addClass("active").end().find('[data-toggle="tab"]').attr("aria-expanded", !0), o && o()
-                    }
-                    var s = i.find("> .active"),
-                        a = o && t.support.transition && (s.length && s.hasClass("fade") || !!i.find("> .fade").length);
-                    s.length && a ? s.one("bsTransitionEnd", r).emulateTransitionEnd(n.TRANSITION_DURATION) : r(), s.removeClass("in")
-                };
-                var i = t.fn.tab;
-                t.fn.tab = e, t.fn.tab.Constructor = n, t.fn.tab.noConflict = function () {
-                    return t.fn.tab = i, this
-                };
-                var o = function (n) {
-                    n.preventDefault(), e.call(t(this), "show")
-                };
-                t(document).on("click.bs.tab.data-api", '[data-toggle="tab"]', o).on("click.bs.tab.data-api", '[data-toggle="pill"]', o)
-            }(t)
-        }).call(e, n("juYr"))
-    },
     x66a: function (t, e, n) {
         (function (t) {
             + function (t) {
@@ -9402,28 +8923,3 @@
     }
 });
 
-const modal = document.querySelector(".modal");
-const previews = document.querySelectorAll(".zoomable img");
-const original = document.querySelector(".full-img");
-const imgText = document.querySelector(".caption");
-
-previews.forEach((preview) => {
-    preview.addEventListener('click', () => {
-        modal.classList.add('open');
-        original.classList.add('open');
-
-        //Dynamic change text and image
-        const originalSrc = preview.getAttribute("data-original");
-        original.src = originalSrc;
-
-        const altText = preview.alt;
-        caption.textContent = altText;
-    });
-});
-
-modal.addEventListener('click', (e)=>{
-    if(e.target.classList.contains("modal")){
-        modal.classList.remove("open");
-        original.classList.remove("open");
-    }
-});
