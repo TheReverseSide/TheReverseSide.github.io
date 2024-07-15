@@ -1,182 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta content="IE=edge" http-equiv="X-UA-Compatible">
-  <meta content="width=device-width,initial-scale=1" name="viewport">
-  <meta content="description" name="description">
-  <meta name="google" content="notranslate" />
-  <meta content="Mashup templates have been developped by Orson.io team" name="author">
-
-  <!-- Disable tap highlight on IE -->
-  <meta name="msapplication-tap-highlight" content="no">
-  
-  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
-  <link href="./assets/favicon.ico" rel="icon">
-
-  <title>Home page</title>  
-
-  <link href="./main.3f6952e4.css" rel="stylesheet">
-  <link href="./fontawesome/css/all.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandon Startz - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
-
-<body class="minimal">
-<div id="site-border-left"></div>
-<div id="site-border-right"></div>
-<div id="site-border-top"></div>
-<div id="site-border-bottom"></div>
-
-<!-- Add your content of header -->
-<header>
-  <nav class="navbar navbar-fixed-top navbar-inverse">
-    <div class="container">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-
-      <div class="collapse navbar-collapse" id="navbar-collapse">
-        <ul class="nav navbar-nav ">
-          <li><a style="color:white;" href="./index.html" title="">01 : Home</a></li>
-          <li><a style="color:white;" href="#works" title="">02 : Works</a></li>
-          <li><a style="color:white;" href="./about.html" title="">03 : About me</a></li>
-          <!-- <li><a href="./contact.html" title="">04 : Contact</a></li> -->
-          <!-- <li><a href="./components.html" title="">05 : Components</a></li> -->
-        </ul>
-
-      </div> 
-    </div>
-  </nav>
-</header>
-<!-- Site content -->
-<div class="hero-full-container background-image-container white-text-container" style="background-image: url('./assets/images/leaf-bg.jpg')">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="hero-full-wrapper">
-          <div class="text-content">
-            
-            <h1>
-              Hi, I'm 
-              <span id="typed-strings">
-                <span>Brandon Startz</span>
-                <span>a VR developer</span>
-                <span>a UX designer</span>
-              </span>
-              <span id="typed"></span>
-            </h1>
-          </div>
+<body>
+    <section id="hero">
+        <img src="./assets/images/Marmortal/Marmortal1.png" alt="Hero Image">
+        <div class="hero-text">
+            <h1>Brandon Startz</h1>
+            <p>Game Developer</p>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
+    </section>
 
-
-<div class="section-container">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-md-8 col-md-offset-2">
-        <a name="works"></a>
-        <div class="text-center">
-          <h2>Brandon Startz's Portfolio</h2>
-          <h3>Hello! I am a Masters student in the Game Design and Production programme at Aalto university.</h3>
-          My main interest is leveraging my <b>Cognitive Science</b> background for <b>Game UX, Game User Research</b>, and <b>designing VR</b>. Read more about me 
-            <a style="color:black;" href="./about.html"><b><u>here.</b></u></a></p>
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="./assets/images/profile.jpeg" alt="Profile Picture" class="profile-picture">
+                <p>Hi! I am Brandon, a game programmer and games user researcher. This is a collection of my personal, educational and professional projects.</p>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
+    </section>
 
+    <section id="portfolio">
+        <div class="container">
+            <br>
+            <div class="portfolio-item theme1">
+                <div class="portfolio-item img">
+                    <img src="./assets//images/FTA/Diagrams and such - Frame 1.jpg" alt="Photo 3">
+                </div>
+                <div class="portfolio-info">
+                    <h2>Foreign Language Text Analyzer</h2>
+                    <p><a href="https://github.com/username/project1" target="_blank"><i class="fab fa-github github-icon"></i> GitHub</a></p>
+                    <br>
+                    <p>After becoming interested in ML after my <a href="https://aaltodoc.aalto.fi/items/67c47697-a272-4d8f-b82c-ca297eea91f1" target="_blank">Masters Thesis</a>, <span class="highlight-project1">I decided to continue exploring the potential of NLP.</span></p>
+                    <br>
+                    <p>Since I love learning languages, I thought I would create a tool to help streamline one of the most time consuming parts of learning a langauge: processing new vocabulary.</p>
+                    <br>
+                    <p><span class="highlight-project1">Objective:</span> To take a foreign-language PDF and create a list of all words, lemmitize them (put them in their base-form), then remove any words I already know. From there, the program creates a frequency list of the words, accompanied with an example sentence of that word. A Google Translate plugin is then used to generate translations for each word. From there, the CSV file can be easily imported into [Anki flashcards](https://apps.ankiweb.net/) for memorization.</p>
+                </div>
+                <div class="photo-grid-container">
+                    <div class="photo-grid">
+                        <div class="photo-item">
+                            <img src="./assets/images/FTA/FTA_out.jpg" alt="Photo 1">
+                            <p class="caption">Output of the Foreign Language Text Analyzer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<div class="section-container">
-  <div class="container">
-      <div class="row">
-          <div class="col-xs-12 col-md-12 section-container-spacer">
-              <h2 class="text-center">My Games and Projects</h2>
-          </div>
-      </div>
-      <div class="row">
-          <div class="col-xs-12 col-md-4">
-              <a href="./work_marmortal.html">
-                <img src="./assets/images/Marmortal_main_hover.png" alt="" class="img-responsive">
-                <h3 class="text-center">Marmortal</h3>
-                <p>
-                  <b>Project:</b> A FPS with a frantic pace and fluid movement.
-                  <br>
-                  <b>My roles:</b> UX and Audio Programmer.
-                </p>
-              </a>
-          </div>
+            <div class="portfolio-item theme2">
+                <div class="youtube-container">
+                    <div class="youtube-embed">
+                        <iframe src="https://www.youtube.com/embed/LshJXdmBMsM" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h2>Music Fairy Tales</h2>
+                    <p><a href="https://apps.apple.com/fi/app/feel-play/id6449542978?l=en" target="_blank"><i class="fab fa-app-store-ios"></i> App store</a></p>
+                    <p><a href="https://www.feelandplay.com/en/" target="_blank"><i class="fa fa-external-link-alt"></i> Music Fairy Tales Oy</a></p>
+                    <br>
+                    <p>Feel & Play is a musical app that helps you practice emotional skills. An inspiringly participatory app adventure combines musicality, visuality and playfulness with multi-user collaboration.</p>
+                    <br>
+                    <p>As the <span class="highlight-project2">lead developer of this Unity project</span>, I guided a team of developers to improve the quality and functionality of the existing codebase.</p>
+                    <br>
+                    <p>Feel and Play was funded by Finland's ministry of education, in an effort to promote their goals of improved emotional intelligence in children.</p>
+                </div>
+            </div>
 
-          <div class="col-xs-12 col-md-4">
-            <a href="./work_intell.html">
-              <img src="./assets/images/Intell_main_hover.jpg" alt="" class="img-responsive">
-              <h3 class="text-center">Space Escape</h3>
-              <p>
-                <b>Project: </b>VR escape room in space.
-                <br>
-                <b>My roles:</b> VR developer, Producer, Environmental Design.</p>
-            </a>
-          </div>
+            <div class="portfolio-item theme3">
+                <div class="portfolio-item img">
+                    <img src="./assets/images/Thesis/thesis_diag2.jpg" alt="Photo 3">
+                </div>
+                <div class="portfolio-info">
+                    <h2>Masters Thesis Project</h2>
+                    <p><a href="https://aaltodoc.aalto.fi/items/67c47697-a272-4d8f-b82c-ca297eea91f1" target="_blank"><i class="fa fa-file"></i> Aalto docs</a></p>
+                    <br>
+                    <p>Masters Thesis project for Game Design and Production program at Aalto University. <br><br> 
+                        Remote playtesting usually requires the manual review of tens of hours of footage, and while this system reduces the number of valuable insights collected from each playtest video, it <span class="highlight-project3">greatly increases the speed of insight-collection</span>, allowing a larger turnover of user tests. <br><br> 
+                        In brief, transcripts were generated from the playtest videos, which were then <span class="highlight-project3">analyzed by a sentence classifier trained with manually labelled data</span> and the classified results (in the form of video timestamps) are then passed to the user researcher, sorted by sentiment and intensity.</p>
+                </div>
+                <div class="photo-grid">
+                    <div class="photo-item">
+                        <img src="./assets/images/Thesis/thesis_diag.jpg" alt="Photo 1">
+                        <p class="caption">The development process of the automation system</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="./assets/images/Thesis/Thesis PTC.png" alt="Photo 2">
+                        <p class="caption">PlaytestCloud, the service used to collect playtest data</p>
+                    </div>
+                </div>
+            </div>
 
-          <div class="col-xs-12 col-md-4">
-            <a href="./work_afterdark.html">
-              <img src="./assets/images/Glamour_thumbnail_hover.jpg" alt="" class="img-responsive">
-              <h3 class="text-center">AfterDark VR Project</h3>
-              <p>
-                <b>Project: </b>Freelance work for VR movie showing.<br>
-                <b>My roles: </b>VR developer.</p>
-            </a>
-          </div>
-      </div>
+            <div class="portfolio-item theme4">
+                <div class="portfolio-item img">
+                    <img src="./assets/images/AfterDark/Glamour_thumbnail.jpg" alt="Photo 3">
+                </div>
+                <div class="portfolio-info">
+                    <h2>Afterdark VR</h2>
+                    <br>
+                    <p>A <span class="highlight-project4">freelancing project created to show a 180 degree VR video</span> for a film festival.</p>
+                    <br>
+                    <p>This was a solo project, I used <span class="highlight-project4">Unity, C# and Oculus Dev Kit</span> to create the project for Oculus Quests 1 & 2.</p>
+                    <br>
+                    <p>Unfortunately, I cannot share video footage of the app due to NDA.</p>
+                </div>
+                <div class="photo-grid">
+                    <div class="photo-item">
+                        <img src="./assets/images/AfterDark/afterdark_main.png" alt="Photo 1">
+                        <!-- <p class="caption">Main scene of Afterdark VR</p> -->
+                    </div>
+                    <div class="photo-item">
+                        <img src="./assets/images/AfterDark/afterdark_scene.png" alt="Photo 2">
+                        <!-- <p class="caption">Another scene from Afterdark VR</p> -->
+                    </div>
+                </div>
+            </div>
 
-      <br>
+            <div class="portfolio-item theme5">
+                <div class="youtube-container">
+                    <div class="youtube-embed">
+                        <iframe src="https://www.youtube.com/embed/2zdHv6CcfAI?si=1LN7h9BoKR2PWFks" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h2>Marmortal</h2>
+                    <br>
+                    <p>A <span class="highlight-project5">PC FPS with fluid movement, wall-running</span> and frantic race up a tower</p>
+                    <br>
+                    <p>I was the <span class="highlight-project5">audio programmer, using FMOD with Unity and C#</span> for music and sound effects. I also conducted playtests as a user researcher.</p>
+                    <br>
+                    <p>Student project for the <span class="highlight-project5">Game Project course at Aalto University</span>, developed in 7 months using Unity. Team Size: 10.</p>
+                </div>
+                <div class="photo-grid-container">
+                    <div class="photo-grid">
+                        <div class="photo-item">
+                            <img src="./assets/images/Marmortal/Marmortal1.png" alt="Photo 1">
+                            <!-- <p class="caption">Screenshot from Marmortal</p> -->
+                        </div>
+                        <div class="photo-item">
+                            <img src="./assets/images/Marmortal/Marmortal2.png" alt="Photo 2">
+                            <!-- <p class="caption">Another screenshot from Marmortal</p> -->
+                        </div>
+                        <div class="photo-item">
+                            <img src="./assets/images/Marmortal/Marmortal3.png" alt="Photo 3">
+                            <!-- <p class="caption">Third screenshot from Marmortal</p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-      <div class="row">
-        <div class="col-xs-12 col-md-4">
-          <a href="./work_bb.html">
-            <img src="./assets/images/BB_main_hover.png" alt="" class="img-responsive">
-            <h3 class="text-center">Battle Beetles</h3>
-            <p><b>Project: </b>A multiplayer game experimenting with a 2nd person camera.<br>
-              <b>My roles: </b>Game Designer, UI/UX.</p>
-          </a>
+            <div class="portfolio-item theme6">
+                
+                <!-- Insert video or photo here -->
+
+                <div class="portfolio-info">
+                    <h2>Battle Beetles</h2>
+                    <br>
+                    <p>A <span class="highlight-project6">PC battle royale</span> where players ride beetles in an arena, using a second-person camera that follows the beetle, not the character. Don't get knocked off!</p>
+                    <br>
+                    <p>I wrote <span class="highlight-project6">code for the UI, various gameplay elements,</span> and controller input</p>
+                    <br>
+                    <p>Student project for the <span class="highlight-project6">Game Project course at Aalto University</span>, developed in 3 months using Unity. Team Size: 6</p>
+                </div>
+                <div class="photo-grid-container">
+                    <div class="photo-grid">
+                        <div class="photo-item">
+                            <img src="./assets/images/BattleBeetles/BB_main.png" alt="Photo 1">
+                            <!-- <p class="caption">Main menu of Battle Beetles</p> -->
+                        </div>
+                        <div class="photo-item">
+                            <img src="./assets/images/BattleBeetles/BB_char_selection.png" alt="Photo 2">
+                            <!-- <p class="caption">Character selection screen in Battle Beetles</p> -->
+                        </div>
+                        <div class="photo-item">
+                            <img src="./assets/images/BattleBeetles/BB_map.jpg" alt="Photo 3">
+                            <!-- <p class="caption">Map overview in Battle Beetles</p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="col-xs-12 col-md-4">
-          <a href="./work_wtba.html">
-            <img src="./assets/images/wtba_main_hover.png" alt="" class="img-responsive">
-            <h3 class="text-center">Where the Birds Are</h3>
-            <p><b>Project: </b>A music-based reflective game, revolving around the idea of "home".<br>
-              <b>My roles: </b>Game Designer, Environment design, Animations.</p>
-          </a>
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p><i class="fas fa-user"></i> Brandon Startz</p>
+            <p><a href="mailto:brandon.startz@gmail.com"><i class="fas fa-envelope"></i> brandon.startz@gmail.com</a></p>
+            <p><a href="https://www.linkedin.com/in/brandon-startz-40b277133/" target="_blank"><i class="fab fa-linkedin"></i> linkedin/brandon-startz-40b277133</a></p>
         </div>
-
-        <div class="col-xs-12 col-md-4">
-          <a href="./work_bsg.html">
-              <img src="./assets/images/besiege_main_hover.png" alt="" class="img-responsive">
-              <h3 class="text-center">Besiege Machine Learning</h3>
-              <p>
-                <b>Project:</b> Using Machine learning to optimize mayhem.
-                <br>
-                <b>My roles:</b> Python Programmer.
-              </p>
-            </a>
-        </div>
-    </div>
-  </div>
-</div>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function (event) {
-     type();
-  });
-</script>
-
-<script type="text/javascript" src="./main.70a66962.js"></script></body>
-
+    </section>
+</body>
 </html>

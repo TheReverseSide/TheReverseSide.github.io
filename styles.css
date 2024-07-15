@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    background: #f4f4f4;
+    line-height: 1.6;
+}
+
+a {
+    color: black;
+}
+
+/* Container for the photo grid */
+.photo-grid-container {
+    width: 100%;
+    max-width: 850px; /* Adjust this value to set the maximum size */
+    padding: 14px;
+    margin: 0 auto; /* Center the container */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+/* Photo grid styles */
+.photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px; /* Space between photos */
+    justify-content: center; /* Center the grid */
+}
+
+.photo-item {
+    flex: 1 1 calc(50% - 14px); /* Two photos per row with space between them */
+    max-width: calc(50% - 14px); /* Ensure max-width to maintain gap */
+}
+
+.photo-item img {
+    width: 100%;
+    height: auto;
+    /* aspect-ratio: 16/9; */ /* Make images appear more horizontal */
+    display: block;
+    border-radius: 3px; /* Optional: adds rounded corners to the photos */
+}
+
+.caption {
+    font-size: 0.9em;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#hero {
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+}
+
+#hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hero section text styles */
+.hero-text {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-wrap: nowrap;
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 4em;
+}
+
+.hero-text p {
+    font-size: 2em;
+}
+
+/* Profile picture styles */
+.profile-picture {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    float: left;
+}
+
+/* Highlight colors for portfolio items */
+.highlight-project1 {
+    color: #9410AC;
+    font-weight: bold;
+}
+
+.theme1 .portfolio-info {
+    color: #9410AC;
+}
+
+/* */
+.highlight-project2 {
+    color: blue;
+    font-weight: bold;
+}
+
+.theme2 .portfolio-info {
+    color: blue;
+}
+
+/* AFTER DARK */
+.highlight-project3 {
+    color: #25AE95;
+    font-weight: bold;
+}
+
+.theme3 .portfolio-info {
+    color: #25AE95;
+}
+
+.highlight-project4 {
+    color: #61C1CA;
+    font-weight: bold;
+}
+
+.theme4 .portfolio-info {
+    color: #61C1CA;
+}
+
+.highlight-project5 {
+    color: #DCBD41;
+    font-weight: bold;
+}
+
+.theme5 .portfolio-info {
+    color: #DCBD41;
+}
+
+.highlight-project6 {
+    color: teal;
+    font-weight: bold;
+}
+
+.theme6 .portfolio-info {
+    color: teal;
+}
+
+/* Portfolio info general text color */
+.portfolio-info p {
+    color: black;
+    line-height: 1.4;
+}
+
+#about {
+    background: #fff;
+    padding: 4em 0;
+    text-align: center;
+}
+
+#portfolio {
+    background: #f1f1f1;
+    padding: 4em 0;
+}
+
+#portfolio .portfolio-item {
+    margin-bottom: 2em;
+    padding: 2em;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
+}
+
+.portfolio-item video, .youtube-container, iframe {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
+    
+}
+
+
+.youtube-embed {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+}
+
+.youtube-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto; 
+    margin-bottom: 1em;
+}
+
+.portfolio-info {
+    padding: 10px 0;
+}
+
+/* Project themes */
+
+#contact {
+    background: #fff;
+    text-align: center;
+    padding: 2em 0;
+}
+
+#contact p {
+    margin-bottom: 1em;
+}
+
+#contact a {
+    color: #444;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background: #444;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.github-icon {
+    color: black;
+}
+
+.appstore-icon {
+    color: black;
+}
+
+.resp-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
