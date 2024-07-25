@@ -40,7 +40,6 @@ a {
 .photo-item img {
     width: 100%;
     height: auto;
-    /* aspect-ratio: 16/9; */ /* Make images appear more horizontal */
     display: block;
     border-radius: 3px; /* Optional: adds rounded corners to the photos */
 }
@@ -49,6 +48,11 @@ a {
     font-size: 0.9em;
     text-align: center;
     margin-top: 5px;
+    color: #555;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }
 
 .container {
@@ -61,7 +65,7 @@ a {
     width: 100%;
     height: 50vh;
     overflow: hidden;
-    position:relative;
+    position: relative;
 }
 
 #hero img {
@@ -102,59 +106,29 @@ a {
 
 /* Highlight colors for portfolio items */
 .highlight-project1 {
-    color: #9410AC;
+    color: blue;
     font-weight: bold;
 }
 
 .theme1 .portfolio-info {
-    color: #9410AC;
+    color: blue;
 }
 
-/* */
+.theme1-box {
+    border: 2px solid blue;
+}
+
 .highlight-project2 {
-    color: blue;
+    color: #9410AC;
     font-weight: bold;
 }
 
 .theme2 .portfolio-info {
-    color: blue;
+    color: #9410AC;
 }
 
-/* AFTER DARK */
-.highlight-project3 {
-    color: #25AE95;
-    font-weight: bold;
-}
-
-.theme3 .portfolio-info {
-    color: #25AE95;
-}
-
-.highlight-project4 {
-    color: #61C1CA;
-    font-weight: bold;
-}
-
-.theme4 .portfolio-info {
-    color: #61C1CA;
-}
-
-.highlight-project5 {
-    color: #DCBD41;
-    font-weight: bold;
-}
-
-.theme5 .portfolio-info {
-    color: #DCBD41;
-}
-
-.highlight-project6 {
-    color: teal;
-    font-weight: bold;
-}
-
-.theme6 .portfolio-info {
-    color: teal;
+.theme2-box {
+    border: 2px solid #9410AC;
 }
 
 /* Portfolio info general text color */
@@ -187,14 +161,20 @@ a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
 }
 
+.portfolio-box {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .portfolio-item video, .youtube-container, iframe {
     width: 100%;
     height: auto;
     margin-bottom: 1em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
-    
 }
-
 
 .youtube-embed {
     position: relative;
@@ -276,4 +256,20 @@ footer a:hover {
     width: 100%;
     height: 100%;
     border: 0;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .photo-item {
+        flex: 1 1 calc(100% - 14px); /* One photo per row on smaller screens */
+        max-width: calc(100% - 14px);
+    }
+
+    .hero-text h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-text p {
+        font-size: 1.5em;
+    }
 }
