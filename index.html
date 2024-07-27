@@ -12,16 +12,9 @@
         <img src="./assets/images/Marmortal/Marmortal1.png" alt="Hero Image">
         <div class="hero-text">
             <h1>Brandon Startz</h1>
-            <p>Game Developer</p>
-        </div>
-    </section>
-
-    <section id="about">
-        <div class="container">
-            <div class="about-content">
+            <!-- <div class="about-content">
                 <img src="./assets/images/profile.jpeg" alt="Profile Picture" class="profile-picture">
-            </div>
-            <h2>About Me</h2>
+            </div> -->
             <div class="about-content">
                 <p>Hi! I'm Brandon, a proficient Unity and C# developer with strong multidisciplinary skills.</p>
                 <br>
@@ -29,12 +22,26 @@
                 <br>
                 <p>This is a collection of my professional, educational and personal projects.</p>
             </div>
+            <!-- <p>Game Developer</p> -->
         </div>
     </section>
 
+    <!-- <section id="about">
+        <div class="container">
+            
+            <!-- <h2>About Me</h2> -->
+<!--         
+        </div>
+    </section> -->
+
     <section id="portfolio">
         <div class="container">
-            <br>
+
+
+            <div class="portfolio-item section">
+                <h1>Games</h1>
+            </div>
+
             <div class="portfolio-item theme1">
                 <div class="youtube-container">
                     <div class="youtube-embed">
@@ -47,17 +54,59 @@
                     <p><a href="https://apps.apple.com/fi/app/feel-play/id6449542978?l=en" target="_blank"><i class="fab fa-app-store-ios"></i> App store</a></p>
                     <p><a href="https://www.feelandplay.com/en/" target="_blank"><i class="fa fa-external-link-alt"></i> Music Fairy Tales Oy</a></p>
                     <div class="portfolio-box theme1-box">
-                        <p>Feel & Play is a musical mobile app that helps you develop emotional intellgence skills.</p>
-                        <p>As the <span class="highlight-project1">lead developer of this Unity project, I guided a small team of developers</span> to improve the quality and functionality of the existing codebase as well as add new features, such as painting.</p>
+                        <span class="highlight-project1">What is it? </span><p>Feel & Play is a musical app for mobile that helps children develop emotional intellgence skills.</p>
+                        <p>An inspiringly participatory app adventure that combines musicality, visuality and playfulness with multi-user collaboration.</p>
+                        <p>Feel and Play was funded by Finland's Ministry of Education, in an effort to promote their goals of improved emotional intelligence in children.</p>
                     </div>
                     <br>
-                    <p>Developed with Unity and C#. Versions developed for Android mobiles, iPads and large multitouch screens. Available on App Store.</p>
+                    <span class="highlight-project1">My role: </span><p>As the lead developer of this Unity project, I guided a small team of developers to improve the quality and functionality of the existing codebase as well as add new features, such as painting.</p>
                     <br>
-                    <p>An inspiringly participatory app adventure that combines musicality, visuality and playfulness with multi-user collaboration. Feel and Play was funded by Finland's ministry of education, in an effort to promote their goals of improved emotional intelligence in children.</p>
+                    <span class="highlight-project1">Technology / Team / Time: </span><p>Developed with Unity and C#. Versions developed for Android mobiles, iPads and large multitouch screens. Available on App Store.</p>
                 </div>
             </div>
 
+            <div class="portfolio-item theme4">
+                <div class="youtube-container">
+                    <div class="youtube-embed">
+                        <iframe src="https://www.youtube.com/embed/2zdHv6CcfAI?si=1LN7h9BoKR2PWFks" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h2>Marmortal</h2>
+                    <h3>Game Design and Production MA | Aalto University, Finland | 2022</h3>
+                    <div class="portfolio-box theme4-box">
+                        <span class="highlight-project4">What is it? </span><p>A FPS with fluid movement, wall-running and frantic race up a tower against the clock.</p>
+                        <p>Runner up of the <a href="https://www.bit1.fi/2021/05/25/the-winning-teams-of-bit1-2021/" target="_blank">2021 Bit1 game competition!</a></p>
+                    </div>
+                    <br>
+                    <span class="highlight-project4">My role: </span><p>I was the audio programmer, using FMOD with Unity and C# to implement music and sound effect logic.</p>
+                    <p>In addition to my role as audio programmer, I also conducted playtests as a user researcher and communicated findings with the development team.</p>
+                    <br>
+                    <span class="highlight-project4">Technology / Team / Time: </span><p>Developed in 7 months using Unity for PC. Team Size: 10.</p>
+                </div>
+                <div class="photo-grid-container">
+                    <div class="photo-grid">
+                        <div class="photo-item">
+                            <img src="./assets/images/Marmortal/Marmortal2.png" alt="A screenshot from Marmortal" class="clickable">
+                            <p class="caption">A screenshot from Marmortal</p>
+                        </div>
+                        <div class="photo-item">
+                            <img src="./assets/images/Marmortal/Marmortal3.png" alt="Another screenshot from Marmortal" class="clickable">
+                            <p class="caption">Another screenshot from Marmortal</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="portfolio-item section">
+                <h1>Projects</h1>
+            </div>
+
+
             <div class="portfolio-item theme2">
+
+                
                 <div class="portfolio-item img">
                     <img src="./assets/images/FTA/FTA_diag.jpg" alt="The flow of the analyzer script" class="clickable">
                 </div>
@@ -66,13 +115,14 @@
                     <h3>Personal project | 2024</h3>
                     <p><a href="https://github.com/TheReverseSide/Language-Text-Frequency" target="_blank"><i class="fab fa-github github-icon"></i> GitHub</a></p>
                     <div class="portfolio-box theme2-box">
-                        <p>A simple script that I wrote to help streamline the most time consuming part of learning a foreign language: processing new vocabularly.</p>
+                        <span class="highlight-project2">What is it? </span><p>A simple script that I wrote to help streamline the most time consuming part of learning a foreign language: processing new vocabularly.</p>
                         <p>SpaCy Natural Language Processing models are used to process and lemmitize words, which are then organized for export to flashcards.</p>
                     </div>
                     <br>
-                    <p>After becoming interested in artificial intelligence during my <a href="https://aaltodoc.aalto.fi/items/67c47697-a272-4d8f-b82c-ca297eea91f1" target="_blank">Masters Thesis</a>, <span class="highlight-project2">I decided to continue exploring the potential of natural language processing.</span></p>
+                    <span class="highlight-project2">My role:</span><p>After becoming interested in artificial intelligence during my <a href="https://aaltodoc.aalto.fi/items/67c47697-a272-4d8f-b82c-ca297eea91f1" target="_blank">Masters Thesis</a>, I decided to continue exploring the potential of natural language processing.</p>
+                    <p>The program takes a foreign-language PDF and processes the words, creating a frequency list accompanied with an example sentence of that word. A Google Translate plugin is then used to generate translations for each word. From there, the CSV file can be easily imported into <a href="https://apps.ankiweb.net/" target="_blank">Anki flashcards</a> for memorization.</p>
                     <br>
-                    <p><span class="highlight-project2">Objective:</span> Take a foreign-language PDF and create a list of all words, lemmitize them (put them in their base-form), then remove any words I already know. From there, the program creates a frequency list of the words, accompanied with an example sentence of that word. A Google Translate plugin is then used to generate translations for each word. From there, the CSV file can be easily imported into <a href="https://apps.ankiweb.net/" target="_blank">Anki flashcards</a> for memorization.</p>
+                    <span class="highlight-project2">Technology / Team / Time: </span><p>This was a solo project, using SpaCy language models and Python.</p>
                 </div>
                 <div class="photo-grid-container">
                     <div class="photo-grid">
@@ -93,14 +143,15 @@
                     <h3>Game Design and Production MA | Aalto University, Finland | 2022</h3>
                     <p><a href="https://aaltodoc.aalto.fi/items/67c47697-a272-4d8f-b82c-ca297eea91f1" target="_blank"><i class="fa fa-file"></i> Aalto docs</a></p>
                     <div class="portfolio-box theme3-box">
-                        <p>Developed for my masters thesis, this program uses neural language models to automatically classify, label and highlight areas of interest to the games user researcher.</p>
-                        <p>Developed using Python and <a href="https://huggingface.co/" target="_blank">Hugging Face</a> language models, while I was working at <a href="https://hypehype.com/en" target="_blank">HypeHype</a> mobile game company as a Player Analyst.</p>
+                        <span class="highlight-project3">What is it? </span><p>This program uses neural language models to automatically classify, label and highlight areas of interest to the games user researcher.</p>
+                        <p>In brief, remote playtesting usually requires the manual review of tens of hours of footage, and we wanted to expedite that process. </p>
+                        <p>Transcripts were generated from playtest videos, which were then analyzed by a sentence classifier trained with manually labelled data and the classified results (in the form of video timestamps) are then passed to the user researcher, sorted by sentiment and intensity.</p>
                     </div>
                     <br>
-                    <p>In brief, remote playtesting usually requires the manual review of tens of hours of footage, and we wanted to expedite that process. </p>
-                    <p>Transcripts were generated from playtest videos, which were then <span class="highlight-project3">analyzed by a sentence classifier trained with manually labelled data</span> and the classified results (in the form of video timestamps) are then passed to the user researcher, sorted by sentiment and intensity.</p>
+                    <span class="highlight-project3">My role: </span><p>Wrote parts the code, ran the study to compare the software against a manual approach.</p>
                     <br>
-                    <p>The performance of the program was compared in a study against a manual approach, and was shown to <span class="highlight-project3">greatly increase the speed of insight-collection</span>, allowing a larger turnover of user tests, at the cost of a slightly reduced number of insights found per playtest.</p>
+                    <span class="highlight-project3">Technology / Team / Time: </span><p>Developed using Python and <a href="https://huggingface.co/" target="_blank">Hugging Face</a> language models, while I was working at <a href="https://hypehype.com/en" target="_blank">HypeHype</a> mobile game company as a Player Analyst.</p>
+                    <p>Developed for my masters thesis, it was designed to improve the user research process at HypeHype. Compared in a study against a manual approach, and was shown to greatly increase the speed of insight-collection, allowing a larger turnover of user tests.</p>
                 </div>
                 <div class="photo-grid">
                     <div class="photo-item">
@@ -114,37 +165,7 @@
                 </div>
             </div>
 
-            <div class="portfolio-item theme4">
-                <div class="youtube-container">
-                    <div class="youtube-embed">
-                        <iframe src="https://www.youtube.com/embed/2zdHv6CcfAI?si=1LN7h9BoKR2PWFks" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="portfolio-info">
-                    <h2>Marmortal</h2>
-                    <h3>Game Design and Production MA | Aalto University, Finland | 2022</h3>
-                    <div class="portfolio-box theme4-box">
-                        <p>A PC FPS with fluid movement, wall-running and frantic race up a tower.</p>
-                        <p>I was the <span class="highlight-project4">audio programmer, using FMOD with Unity and C#</span> to implement music and sound effect logic.</p>
-                    </div>
-                    <br>
-                    <p>In addition to my role as audio programmer, I also conducted playtests as a user researcher and communicated findings with the development team.</p>
-                    <br>
-                    <p>Developed in 7 months using Unity. Team Size: 10.</p>
-                </div>
-                <div class="photo-grid-container">
-                    <div class="photo-grid">
-                        <div class="photo-item">
-                            <img src="./assets/images/Marmortal/Marmortal2.png" alt="A screenshot from Marmortal" class="clickable">
-                            <p class="caption">A screenshot from Marmortal</p>
-                        </div>
-                        <div class="photo-item">
-                            <img src="./assets/images/Marmortal/Marmortal3.png" alt="Another screenshot from Marmortal" class="clickable">
-                            <p class="caption">Another screenshot from Marmortal</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </section>
 
