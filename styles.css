@@ -106,29 +106,55 @@ a {
 
 /* Highlight colors for portfolio items */
 .highlight-project1 {
-    color: blue;
+    color: #4C3BAE;
     font-weight: bold;
 }
 
 .theme1 .portfolio-info {
-    color: blue;
+    color: #4C3BAE;
 }
 
 .theme1-box {
-    border: 2px solid blue;
+    border: 2px solid #4C3BAE;
 }
 
 .highlight-project2 {
-    color: #9410AC;
+    color: #b04ec1;
     font-weight: bold;
 }
 
 .theme2 .portfolio-info {
-    color: #9410AC;
+    color: #b04ec1;
 }
 
 .theme2-box {
-    border: 2px solid #9410AC;
+    border: 2px solid #b04ec1;
+}
+
+.highlight-project3 {
+    color: #9b85cc;
+    font-weight: bold;
+}
+
+.theme3 .portfolio-info {
+    color: #9b85cc;
+}
+
+.theme3-box {
+    border: 2px solid #9b85cc;
+}
+
+.highlight-project4 {
+    color: #D69F20;
+    font-weight: bold;
+}
+
+.theme4 .portfolio-info {
+    color: #D69F20;
+}
+
+.theme4-box {
+    border: 2px solid #D69F20;
 }
 
 /* Portfolio info general text color */
@@ -156,7 +182,8 @@ a {
 
 #portfolio .portfolio-item {
     margin-bottom: 2em;
-    padding: 2em;
+    padding: 1.5em;
+    border-radius: 4px;
     background: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
 }
@@ -272,4 +299,68 @@ footer a:hover {
     .hero-text p {
         font-size: 1.5em;
     }
+}
+
+/* Modal (background) */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 50px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9); 
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 90%;
+    max-width: 1000px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption { 
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
