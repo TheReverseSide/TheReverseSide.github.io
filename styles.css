@@ -1,3 +1,5 @@
+/* https://cssgradient.io/ */
+
 * {
     margin: 0;
     padding: 0;
@@ -66,6 +68,8 @@ a {
     height: 50vh;
     overflow: hidden;
     position: relative;
+    background: rgb(115,105,175);
+    background: radial-gradient(circle, rgba(115,105,175,1) 0%, rgba(181,124,191,1) 27%, rgba(255,168,184,1) 52%, rgba(249,206,250,1) 73%, rgba(214,179,98,1) 100%); 
 }
 
 #hero img {
@@ -339,7 +343,15 @@ footer a:hover {
 
 .section{
     text-align: center;
+    color: white;
     font-weight: bold;
+    margin-bottom: 2em;
+    padding: 1.5em;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
+
+    background: rgb(115,105,175);
+    background: radial-gradient(circle, rgba(115,105,175,1) 0%, rgba(181,124,191,1) 27%, rgba(255,168,184,1) 52%, rgba(249,206,250,1) 73%, rgba(214,179,98,1) 100%); 
 }
 
 /* Add Animation - Zoom in the Modal */
