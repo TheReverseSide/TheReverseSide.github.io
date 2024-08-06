@@ -110,42 +110,42 @@ a {
 
 /* Highlight colors for portfolio items */
 .highlight-project1 {
-    color: #4C3BAE;
+    color: #63537d;
     font-weight: bold;
 }
 
 .theme1 .portfolio-info {
-    color: #4C3BAE;
+    color: #63537d;
 }
 
 .theme1-box {
-    border: 2px solid #4C3BAE;
+    border: 2px solid #63537d;
 }
 
 .highlight-project2 {
-    color: #b04ec1;
+    color: #63537d;
     font-weight: bold;
 }
 
 .theme2 .portfolio-info {
-    color: #b04ec1;
+    color: #63537d;
 }
 
 .theme2-box {
-    border: 2px solid #b04ec1;
+    border: 2px solid #63537d;
 }
 
 .highlight-project3 {
-    color: #9b85cc;
+    color: #F86E5A;
     font-weight: bold;
 }
 
 .theme3 .portfolio-info {
-    color: #9b85cc;
+    color: #F86E5A;
 }
 
 .theme3-box {
-    border: 2px solid #9b85cc;
+    border: 2px solid #F86E5A;
 }
 
 .highlight-project4 {
@@ -350,9 +350,17 @@ footer a:hover {
     border-radius: 4px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
 
-    background: rgb(99, 83, 125, 0.85);
     /* background: radial-gradient(circle, rgba(246,112,105,1) 0%, rgba(236,118,110,1) 25%, rgba(221,138,128,1) 50%, rgba(216,166,153,1) 75%, rgba(189,189,166,1) 100%);    */
 }
+
+.section-games{
+    background: rgb(99, 83, 125, 0.85);
+}
+
+.section-project{
+    background: rgb(248, 110, 90, 0.85);
+}
+
 
 /* Add Animation - Zoom in the Modal */
 .modal-content, #caption { 
