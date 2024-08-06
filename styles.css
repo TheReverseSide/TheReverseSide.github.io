@@ -69,7 +69,7 @@ a {
     overflow: hidden;
     position: relative;
     background: rgb(115,105,175);
-    background: radial-gradient(circle, rgba(115,105,175,1) 0%, rgba(181,124,191,1) 27%, rgba(255,168,184,1) 52%, rgba(249,206,250,1) 73%, rgba(214,179,98,1) 100%); 
+    /* background: radial-gradient(circle, rgba(115,105,175,1) 0%, rgba(181,124,191,1) 27%, rgba(255,168,184,1) 52%, rgba(249,206,250,1) 73%, rgba(214,179,98,1) 100%);  */
 }
 
 #hero img {
@@ -86,7 +86,7 @@ a {
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
-    background: rgba(0, 0, 0, 0.35);
+    background: rgba(15, 34, 78, 0.75);
     padding: 20px;
     border-radius: 10px;
 }
@@ -350,8 +350,8 @@ footer a:hover {
     border-radius: 4px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
 
-    background: rgb(115,105,175);
-    background: radial-gradient(circle, rgba(115,105,175,1) 0%, rgba(181,124,191,1) 27%, rgba(255,168,184,1) 52%, rgba(249,206,250,1) 73%, rgba(214,179,98,1) 100%); 
+    background: rgb(99, 83, 125, 0.85);
+    /* background: radial-gradient(circle, rgba(246,112,105,1) 0%, rgba(236,118,110,1) 25%, rgba(221,138,128,1) 50%, rgba(216,166,153,1) 75%, rgba(189,189,166,1) 100%);    */
 }
 
 /* Add Animation - Zoom in the Modal */
