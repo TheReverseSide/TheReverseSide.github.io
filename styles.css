@@ -14,7 +14,7 @@ body {
 }
 
 a {
-    color: black;
+    color: #102F5B;
 }
 
 /* Container for the photo grid */
@@ -122,45 +122,6 @@ a {
 
 .theme1-box {
     border: 2px solid #102F5B;
-}
-
-.highlight-project2 {
-    color: #63537d;
-    font-weight: bold;
-}
-
-.theme2 .portfolio-info {
-    color: #63537d;
-}
-
-.theme2-box {
-    border: 2px solid #63537d;
-}
-
-.highlight-project3 {
-    color: #F86E5A;
-    font-weight: bold;
-}
-
-.theme3 .portfolio-info {
-    color: #F86E5A;
-}
-
-.theme3-box {
-    border: 2px solid #F86E5A;
-}
-
-.highlight-project4 {
-    color: #D69F20;
-    font-weight: bold;
-}
-
-.theme4 .portfolio-info {
-    color: #D69F20;
-}
-
-.theme4-box {
-    border: 2px solid #D69F20;
 }
 
 /* Portfolio info general text color */
@@ -355,15 +316,6 @@ footer a:hover {
     /* background: radial-gradient(circle, rgba(246,112,105,1) 0%, rgba(236,118,110,1) 25%, rgba(221,138,128,1) 50%, rgba(216,166,153,1) 75%, rgba(189,189,166,1) 100%);    */
 }
 
-/* .section-games{
-    background: rgb(99, 83, 125, 0.85);
-}
-
-.section-project{
-    background: rgb(248, 110, 90, 0.85);
-} */
-
-
 /* Add Animation - Zoom in the Modal */
 .modal-content, #caption { 
     animation-name: zoom;
@@ -392,3 +344,22 @@ footer a:hover {
     text-decoration: none;
     cursor: pointer;
 }
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #102F5B;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #0d2345;
+}
+
