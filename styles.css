@@ -65,7 +65,7 @@ a {
 
 #hero {
     width: 100%;
-    height: 50vh;
+    height: 35vh;
     overflow: hidden;
     position: relative;
     background: rgb(115,105,175);
@@ -86,7 +86,7 @@ a {
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
-    background: rgba(15, 34, 78, 0.75);
+    /* background: rgba(15, 34, 78, 0.75); */
     padding: 20px;
     border-radius: 10px;
 }
@@ -110,16 +110,16 @@ a {
 
 /* Highlight colors for portfolio items */
 .highlight-project1 {
-    color: #63537d;
+    color: #102F5B;
     font-weight: bold;
 }
 
 .theme1 .portfolio-info {
-    color: #63537d;
+    color: #102F5B;
 }
 
 .theme1-box {
-    border: 2px solid #63537d;
+    border: 2px solid #102F5B;
 }
 
 .highlight-project2 {
@@ -168,7 +168,7 @@ a {
 }
 
 #about {
-    background: #fff;
+    background: #f1f1f1;
     padding: 4em 0;
     text-align: center;
 }
@@ -349,17 +349,17 @@ footer a:hover {
     padding: 1.5em;
     border-radius: 4px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
-
+    background: #1B4371;
     /* background: radial-gradient(circle, rgba(246,112,105,1) 0%, rgba(236,118,110,1) 25%, rgba(221,138,128,1) 50%, rgba(216,166,153,1) 75%, rgba(189,189,166,1) 100%);    */
 }
 
-.section-games{
+/* .section-games{
     background: rgb(99, 83, 125, 0.85);
 }
 
 .section-project{
     background: rgb(248, 110, 90, 0.85);
-}
+} */
 
 
 /* Add Animation - Zoom in the Modal */
