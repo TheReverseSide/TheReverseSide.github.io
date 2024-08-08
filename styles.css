@@ -1,230 +1,82 @@
 /* https://cssgradient.io/ */
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    color: #333;
-    background: #f4f4f4;
-    line-height: 1.6;
 }
 
 a {
     color: #102F5B;
 }
 
-/* Container for the photo grid */
-.photo-grid-container {
-    width: 100%;
-    max-width: 850px; /* Adjust this value to set the maximum size */
-    padding: 14px;
-    margin: 0 auto; /* Center the container */
-    box-sizing: border-box; /* Include padding in the element's total width and height */
-}
-
-/* Photo grid styles */
-.photo-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px; /* Space between photos */
-    justify-content: center; /* Center the grid */
-}
-
-.photo-item {
-    flex: 1 1 calc(50% - 14px); /* Two photos per row with space between them */
-    max-width: calc(50% - 14px); /* Ensure max-width to maintain gap */
-}
-
-.photo-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 3px; /* Optional: adds rounded corners to the photos */
-}
-
-.caption {
-    font-size: 0.9em;
-    text-align: center;
-    margin-top: 5px;
-    color: #555;
-    background-color: #fff;
-    padding: 5px;
-    border-radius: 3px;
-    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-#hero {
-    width: 100%;
-    height: 35vh;
-    overflow: hidden;
-    position: relative;
-    background: rgb(115,105,175);
-    /* background: radial-gradient(circle, rgba(115,105,175,1) 0%, rgba(181,124,191,1) 27%, rgba(255,168,184,1) 52%, rgba(249,206,250,1) 73%, rgba(214,179,98,1) 100%);  */
-}
-
-#hero img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Hero section text styles */
-.hero-text {
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    /* text-shadow: 1px 1px 2px black; */
-    text-shadow: black 1px 0 6px;
-    /* background: rgba(15, 34, 78, 0.75); */
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.hero-text h1 {
-    font-size: 4em;
-}
-
-.hero-text p {
-    font-size: 2em;
-}
-
-/* Profile picture styles */
-.profile-picture {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    margin-bottom: 20px;
-}
-
-/* Highlight colors for portfolio items */
-.highlight-project1 {
-    color: #102F5B;
-    font-weight: bold;
-}
-
-.theme1 .portfolio-info {
-    color: #102F5B;
-}
-
-.theme1-box {
-    border: 2px solid #102F5B;
-}
-
-/* Portfolio info general text color */
-.portfolio-info p {
-    color: black;
-    line-height: 1.4;
-}
-
-#about {
-    background: #f1f1f1;
-    padding: 4em 0;
-    text-align: center;
-}
-
 .about-content {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     font-size: 0.6em;
 }
 
-#portfolio {
-    background: #f1f1f1;
-    padding: 4em 0;
+.appstore-icon {
+    color: black;
 }
 
-#portfolio .portfolio-item {
-    margin-bottom: 2em;
-    padding: 1.5em;
-    border-radius: 4px;
-    background: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
-}
-
-.portfolio-box {
-    background: white;
-    border-radius: 10px;
-    padding: 20px;
-    margin-top: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.portfolio-item video, .youtube-container, iframe {
-    width: 100%;
-    height: auto;
-    margin-bottom: 1em;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
-}
-
-.youtube-embed {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    background: #000;
-}
-
-.youtube-embed iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
-.portfolio-item img {
-    width: 100%;
-    height: auto; 
-    margin-bottom: 1em;
-}
-
-.portfolio-info {
-    padding: 10px 0;
-}
-
-/* Project themes */
-
-#contact {
-    background: #fff;
-    text-align: center;
-    padding: 2em 0;
-}
-
-#contact p {
-    margin-bottom: 1em;
-}
-
-#contact a {
-    color: #444;
+.back-button {
+    background-color: #102F5B;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1em;
+    margin-bottom: 20px;
+    padding: 10px 20px;
     text-decoration: none;
+    transition: background-color 0.3s;
 }
 
-#contact a:hover {
-    text-decoration: underline;
+.back-button:hover {
+    background-color: #0d2345;
 }
 
-footer {
+body {
+    background: #f4f4f4;
+    color: #333;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.caption {
+    background-color: #fff;
+    border-radius: 3px;
+    color: #555;
+    font-size: 0.9em;
+    margin-top: 5px;
+    padding: 5px;
+    text-align: center;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+.clickable { /* not actually clickable */
+    border: 5px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    width: 100%;
+    margin: 10px auto;
+    object-fit: cover;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 90%;
+}
+
+.footer {
     background: #444;
     color: #fff;
-    text-align: center;
     padding: 1em 0;
+    text-align: center;
 }
 
 footer a {
@@ -240,86 +92,173 @@ footer a:hover {
     color: black;
 }
 
-.appstore-icon {
+.highlight-project1 {
+    color: #102F5B;
+    font-weight: bold;
+}
+
+.hero-text {
+    border-radius: 10px;
+    color: white;
+    padding: 20px;
+    position: absolute;
+    text-align: center;
+    text-shadow: black 1px 0 6px;
+    top: 65%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    /* text-shadow: 1px 1px 2px black; */
+    /* background: rgba(15, 34, 78, 0.75); */
+}
+
+.hero-text h1 {
+    font-size: 4em;
+}
+
+.hero-text p {
+    font-size: 2em;
+}
+
+.links {
+    display: flex; 
+    align-items: center;
+}
+
+.modal {
+    background-color: rgba(0,0,0,0.9);
+    display: none; 
+    height: 100%; 
+    left: 0;
+    overflow: auto; 
+    padding-top: 50px; 
+    position: fixed; 
+    top: 0;
+    width: 100%; 
+    z-index: 1; 
+    background-color: rgb(0,0,0); 
+}
+
+.modal-content {
+    display: block;
+    margin: auto;
+    max-width: 1000px;
+    width: 90%;
+}
+
+.portfolio-box {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.portfolio-info {
+    padding: 10px 0;
+}
+
+.portfolio-info p {
     color: black;
+    line-height: 1.4;
+}
+
+.portfolio-item img {
+    height: auto; 
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.portfolio-item video, .youtube-container, iframe {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
+    height: auto;
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    height: 150px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    width: 150px;
 }
 
 .resp-iframe {
+    height: 100%;
+    left: 0;
     position: absolute;
     top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
     border: 0;
 }
 
-/* Media queries for responsiveness */
-@media (max-width: 768px) {
-    .photo-item {
-        flex: 1 1 calc(100% - 14px); /* One photo per row on smaller screens */
-        max-width: calc(100% - 14px);
-    }
-
-    .hero-text h1 {
-        font-size: 2.5em;
-    }
-
-    .hero-text p {
-        font-size: 1.5em;
-    }
-}
-
-/* Modal (background) */
-.modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
-    padding-top: 50px; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.9); 
-}
-
-/* Modal Content (image) */
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 90%;
-    max-width: 1000px;
-}
-
-/* Caption of Modal Image */
-#caption {
-    margin: auto;
-    display: block;
-    width: 90%;
-    max-width: 1000px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-}
-
-.section{
-    text-align: center;
+.section {
+    background: #1B4371;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
     color: white;
     font-weight: bold;
     margin-bottom: 2em;
     padding: 1.5em;
-    border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
-    background: #1B4371;
-    /* background: radial-gradient(circle, rgba(246,112,105,1) 0%, rgba(236,118,110,1) 25%, rgba(221,138,128,1) 50%, rgba(216,166,153,1) 75%, rgba(189,189,166,1) 100%);    */
+    text-align: center;
 }
 
-/* Add Animation - Zoom in the Modal */
-.modal-content, #caption { 
-    animation-name: zoom;
-    animation-duration: 0.6s;
+.sub-page-image{
+    border: 5px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 10px auto;
+    object-fit: cover;
+    width: 50%;
+}
+
+.tag {
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    margin: 5px 2px;
+    border-radius: 10px;
+    font-size: 0.8em;
+    font-weight: bold;
+    background-color: #fcfcfc;
+}
+
+.tag-programming {
+    border: 2px solid #1c55a5;
+}
+
+.tag-tool {
+    border: 2px solid rgb(63, 150, 133);
+}
+
+.tag-research {
+    border: 2px solid #6e2f95;
+}
+
+.theme1 .portfolio-info {
+    color: #102F5B;
+}
+
+.theme1-box {
+    border: 2px solid #102F5B;
+}
+
+.youtube-embed {
+    background: #000;
+    height: 0;
+    max-width: 100%;
+    overflow: hidden;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    position: relative;
+}
+
+.youtube-embed iframe {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
 @keyframes zoom {
@@ -327,39 +266,123 @@ footer a:hover {
     to {transform: scale(1)}
 }
 
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption { 
+    animation-duration: 0.6s;
+    animation-name: zoom;
+}
+
+/* Caption of Modal Image */
+#caption {
+    color: #ccc;
+    display: block;
+    height: 150px;
+    margin: auto;
+    max-width: 1000px;
+    padding: 10px 0;
+    text-align: center;
+    width: 90%;
+}
+
+/* Hero section text styles */
+#hero {
+    width: 100%;
+    height: 35vh;
+    overflow: hidden;
+    position: relative;
+    background: rgb(115,105,175);
+}
+
+#hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-video {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-text p {
+        font-size: 1.5em;
+    }
+
+    .photo-item {
+        flex: 1 1 calc(100% - 14px); /* One photo per row on smaller screens */
+        max-width: calc(100% - 14px);
+    }
+}
+
+/* Project themes */
+#about {
+    background: #f1f1f1;
+    padding: 4em 0;
+    text-align: center;
+}
+
+#contact {
+    background: #fff;
+    padding: 2em 0;
+    text-align: center;
+}
+
+#contact a {
+    color: #444;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+#contact p {
+    margin-bottom: 1em;
+}
+
+#portfolio {
+    background: #f1f1f1;
+    padding: 4em 0;
+}
+
+#portfolio .portfolio-item {
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
+    margin-bottom: 2em;
+    padding: 1.5em;
+}
+
 /* The Close Button */
 .close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
     color: #f1f1f1;
     font-size: 40px;
     font-weight: bold;
+    position: absolute;
+    right: 35px;
+    top: 15px;
     transition: 0.3s;
 }
 
 .close:hover,
 .close:focus {
     color: #bbb;
-    text-decoration: none;
     cursor: pointer;
-}
-
-.back-button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-bottom: 20px;
-    font-size: 1em;
-    color: #fff;
-    background-color: #102F5B;
-    border: none;
-    border-radius: 5px;
     text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
 }
-
-.back-button:hover {
-    background-color: #0d2345;
-}
-
