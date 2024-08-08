@@ -3,61 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marmortal</title>
+    <title>Music Fairy Tales Oy</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
+    <section id="hero" class="hero-video">
+        <iframe src="https://www.youtube.com/embed/2zdHv6CcfAI?si=1LN7h9BoKR2PWFks" frameborder="0" allowfullscreen></iframe>
+    </section>
+
     <section id="portfolio">
         <div class="container">
             <button onclick="window.location.href='index.html'" class="back-button">&larr; Back to Portfolio</button>
-            <button onclick="window.location.href='music-fairy-tales.html'" class="back-button">Music Fairy Tales &rarr;</button>
+            <button onclick="window.location.href='music-fairy-tales.html'" class="back-button">Music Fairy tales &rarr;</button>
             <div class="portfolio-item theme1">
                 <h1 style="color: #102F5B;">Marmortal</h1>
-                <p>A FPS with fluid movement, wall-running and frantic race up a tower against the clock.</p>
-                <p>Runner up of the <a href="https://www.bit1.fi/2021/05/25/the-winning-teams-of-bit1-2021/" target="_blank">2021 Bit1 game competition!</a></p>
+                <div class="links">
+                    <a href="https://marmortal.com/" target="_blank" style="margin-right: 20px;">
+                        <i class="fa fa-external-link-alt"></i>  Marmortal
+                    </a>
+                    <a href="https://www.bit1.fi/2021/05/25/the-winning-teams-of-bit1-2021/" target="_blank">
+                        <i class="fa fa-award"></i>  Runner up of the 2021 Bit1 game competition!
+                    </a>
+                </div>
+                <p>A FPS with fluid movement, wall-running and frantic race up a tower against the clock.
+                    You have made a wish to an all powerful entity - the Ascended. However the wish brought forth dire consequences. As a last resort you embark to the sacred tower where wishes are granted to try undo yours...</p>
+                    <p>Developed in 7 months using Unity for PC. Team Size: 10</p>                    
 
+
+                <img src="./assets/images/Marmortal/Marmortal1.png" alt="The player gradually progresses up the divine tower." class="sub-page-image clickable">
+                <p class="caption">The player gradually progresses up the divine tower.</p>
+                
                 <div class="portfolio-info">
                     <br>
-                    <h3>Programming role: </h3>
-                    <p>I was responsible for programming the logic for sound effects and game music, using the FMOD sound engine with Unity and C#. I also handled programming and setting up the UI in Unity.</p>
+                    <h3>My programming role: </h3>
+                    <div class="tags">
+                        <span class="tag tag-programming">Unity</span>
+                        <span class="tag tag-programming">C# programming language</span>
+                        <span class="tag tag-programming">FMOD sound engine</span>
+                        <span class="tag tag-programming">UI programming</span>
+                        <span class="tag tag-tool">Jira</span>
+                        <span class="tag tag-tool">Confluence</span>
+                    </div>
+                    <p>As the audio and UI programmer for Marmortal, I was responsible for implementing the game's sound effects, music, and user interface. 
+                        Using FMOD and C# in Unity, I not only handled the technical programming, but also served as the key facilitator between the programming and audio teams.</p>
                     <br>
-                    <h3>User research role: </h3>
-                    <p>I designed and conducted moderated playtests, wrote and distributed surveys, and presented findings with the development team. As we moved closer to release, my research shifted focus onto usability issues and control nuances, ensuring the game "felt" as intended. This research directly impacted the development of the movement system, particularly the wallrunning mechanic.</p>
+                    <h3>My user researcher role: </h3>
+                    <div class="tags">
+                        <span class="tag tag-research">Moderated playtests</span>
+                        <span class="tag tag-research">Target audience definition</span>
+                        <span class="tag tag-research">Usability testing</span>
+                        <span class="tag tag-research">Affinity map</span>
+                        <span class="tag tag-research">Interviews</span>
+                        <span class="tag tag-tool">Miro</span>
+                        <span class="tag tag-tool">Figma</span>
+                    </div>
+                    <p>User research was the driving force behind Marmortal's development and design. 
+                        We started by benchmarking the game to define the target audience, then recruited participants to implement surveys, cognitive walkthroughs, and interviews. 
+                        Over the 7-month cycle, we conducted over a dozen playtests with 50+ participants.</p>
                     <br>
-                    <span class="highlight-project1"><h3>Technology / Team / Time: </h3></span>
-                    <p>Developed in 7 months using Unity for PC. Team Size: 10.</p>
+                    <p>Engaging users was a continuous process. During ideation, I evaluated concepts with the target audience. 
+                        In pre-production, I led one-on-one tests to uncover usability issues and assess core mechanics. 
+                        As we entered production, I maintained usability testing and fine-tuning of key systems. 
+                        These insights were synthesized into an affinity map, guiding UX guidelines that kept the team user-focused. 
+                        From interviews and surveys to playtests and results mapping, this user-centric approach directly impacted Marmortal's mechanics, like the satisfying wallrunning system, ensuring a polished final experience.
+                    </p>
+                    <br>
+
+                    <img src="./assets/images/Marmortal/Affinity_closeup.PNG" alt="An example of the Affinity Map that aggregrated all of the gathered user research." class="sub-page-image clickable">
+                    <p class="caption">An example of the Affinity Map that aggregrated all of the gathered user research.</p>
+
+                    <img src="./assets/images/Marmortal/Playerflow.PNG" alt="A map of player flow and narrative - informed by previous user research." class="sub-page-image clickable">
+                    <p class="caption">A map of player flow and narrative - informed by previous user research.</p>
                 </div>
 
-                <div class="photo-grid-container">
-                    <div class="photo-grid">
-                        <div class="photo-item">
-                            <img src="./assets/images/Marmortal/Affinity_closeup.PNG" alt="A screenshot from Marmortal" class="clickable">
-                            <p class="caption">Affinity map used during playtesting</p>
-                        </div>
-                        <div class="photo-item">
-                            <img src="./assets/images/Marmortal/Marmortal3.png" alt="A screenshot from Marmortal" class="clickable">
-                            <!-- <p class="caption">A screenshot from Marmortal</p> -->
-                        </div>
-                        <div class="photo-item">
-                            <img src="./assets/images/Marmortal/Marmortal1.png" alt="Another screenshot from Marmortal" class="clickable">
-                            <!-- <p class="caption">Another screenshot from Marmortal</p> -->
-                        </div>
-                        <div class="photo-item">
-                            <img src="./assets/images/Marmortal/Playerflow.PNG" alt="Another screenshot from Marmortal" class="clickable">
-                            <!-- <p class="caption">Another screenshot from Marmortal</p> -->
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </section>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var images = document.getElementsByClassName("clickable");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+
+        for (var i = 0; i < images.length; i++) {
+            images[i].onclick = function(){
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        span.onclick = function() { 
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal content, close the modal
+        modal.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
 </body>
 </html>
-
-
-
-<!-- <div class="youtube-container">
-    <div class="youtube-embed">
-        <iframe src="https://www.youtube.com/embed/2zdHv6CcfAI?si=1LN7h9BoKR2PWFks" frameborder="0" allowfullscreen></iframe>
-    </div>
-</div> -->

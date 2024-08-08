@@ -30,7 +30,7 @@
                     An inspiringly participatory app adventure that combines musicality, visuality and playfulness with multi-user collaboration.
                     Feel and Play was funded by Finland's Ministry of Education, in an effort to promote their goals of improved emotional intelligence in children.</p>
                 
-                <img src="./assets/images/MFT/MFT_1.png" alt="Alt text" class="sub-page-image">
+                <img src="./assets/images/MFT/MFT_1.png" alt="Musical childrens stories compose one of the three app components" class="sub-page-image clickable">
                 <p class="caption">Musical childrens stories compose one of the three app components</p>
                 
                 <div class="portfolio-info">
@@ -42,6 +42,7 @@
                         <span class="tag tag-programming">Mobile</span>
                         <span class="tag tag-programming">AVPro video suite for Unity</span>
                         <span class="tag tag-tool">Notion</span>
+                        <span class="tag tag-tool">Github</span>
                     </div>
                     <p>As the lead developer of this Unity project, I guided a small team of developers to improve the quality and functionality of the existing codebase as well as add new features, such as painting.
                         I also handled the porting of the application to Android mobile devices, Apple tablets, and large multitouch screens such as Clevertouch.
@@ -64,10 +65,10 @@
                         This user-centered approach led to impactful improvements, like adding clearer cues and indicators after discovering children struggled to grasp minigame objectives.</p>
                     <br>
 
-                    <img src="./assets/images/MFT/MFT_2.png" alt="Alt text" class="sub-page-image">
+                    <img src="./assets/images/MFT/MFT_2.png" alt="Fantasy instruments encourage children to create music together and recognize emotions" class="sub-page-image clickable">
                     <p class="caption">Fantasy instruments encourage children to create music together and recognize emotions</p>
 
-                    <img src="./assets/images/MFT/MFT_4.png" alt="Alt text" class="sub-page-image">
+                    <img src="./assets/images/MFT/MFT_4.png" alt="Painting allows up to 8 children to create a scene together, accompanied by classic music" class="sub-page-image clickable">
                     <p class="caption">Painting allows up to 8 children to create a scene together, accompanied by classic music</p>
                 </div>
 
@@ -75,8 +76,46 @@
             </div>
         </div>
     </section>
+
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var images = document.getElementsByClassName("clickable");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+
+        for (var i = 0; i < images.length; i++) {
+            images[i].onclick = function(){
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        span.onclick = function() { 
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal content, close the modal
+        modal.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
 </body>
 </html>
-
-
-
