@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scale or Be Scaled</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- <section id="hero" class="hero-video">
+        <iframe src="https://www.youtube.com/embed/2zdHv6CcfAI?si=1LN7h9BoKR2PWFks" frameborder="0" allowfullscreen></iframe>
+    </section> -->
+
+    <section id="portfolio">
+        <div class="container">
+            <button onclick="window.location.href='index.html'" class="back-button">&larr; Back Home</button>
+            <button onclick="window.location.href='music-fairy-tales.html'" class="back-button">Music Fairy tales &rarr;</button>
+            <button onclick="window.location.href='marmortal.html'" class="back-button">Marmortal &rarr;</button>
+
+            <div class="portfolio-item theme1">
+                <h1 style="color: #102F5B;">Scale or Be Scaled</h1>
+                <h3 style="color: #102F5B;">Game Makers Toolkit Game Jam 2024</h3>
+                <div class="links">
+                    <a href="https://thereverseside.itch.io/scale-or-be-scaled" target="_blank" style="margin-right: 20px;">
+                        <i class="fa fa-external-link-alt"></i>  Scale or Be Scaled
+                    </a>
+                </div>
+                <p>Please the Doggod! Race against your opponent to get your scale balanced better than your opponent's before time runs out. 
+                    You can interfere with your opponent in plenty of ways, just be sure to protect your own scale as well!</p>
+                <p>Developed over a long weekend using Unity for PC and WebGL. Team Size: 4 (2 artists, 2 programmers)</p>                    
+
+
+                <img src="./assets/images/ScaleOrBeScaled/SRBS_1.png" alt="The Doggod requires things to be balanced!! Do not disappoint him." class="sub-page-image clickable">
+                <p class="caption">The Doggod requires things to be balanced!! Do not disappoint them.</p>
+                
+                <div class="portfolio-info">
+                    <br>
+                    <h3>My roles: </h3>
+                    <div class="tags">
+                        <span class="tag tag-programming">Unity</span>
+                        <span class="tag tag-programming">C# programming language</span>
+                        <span class="tag tag-programming">Gameplay programming</span>
+                
+                    </div>
+                    <p>My programming focuses were on gameplay (particularly interacting with items, activating powerups, etc), scoring logic, scale physics, and UI.</p>
+                    
+                    <br>
+                    <div class="tags">
+                        <span class="tag tag-research">Project management</span>
+                        <span class="tag tag-research">Notion</span>
+                    </div>
+                    <p>I also acted as the project manager, keeping the task list organized and prioritized, and ensuring everyone was on target.</p>
+                    <br>
+
+                    <img src="./assets/images/ScaleOrBeScaled/SRBS_action_1.png" alt="Players attempt to balance their scales, while collecting powerups and avoiding the other player's interference." class="sub-page-image clickable">
+                    <p class="caption">Players attempt to balance their scales, while collecting powerups and avoiding the other player's interference.</p>
+
+                    <img src="./assets/images/ScaleOrBeScaled/SRBS_action_2.png" alt="Powerful powerups such as bombs can quickly change the tide of the game!" class="sub-page-image clickable">
+                    <p class="caption">Powerful powerups such as bombs can quickly change the tide of the game!</p>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var images = document.getElementsByClassName("clickable");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+
+        for (var i = 0; i < images.length; i++) {
+            images[i].onclick = function(){
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        span.onclick = function() { 
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal content, close the modal
+        modal.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
