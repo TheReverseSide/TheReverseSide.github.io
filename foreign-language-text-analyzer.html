@@ -11,3 +11,118 @@
         </div>
     </div>
 </div> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foreign Text Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- <section id="hero" class="hero-video">
+        <iframe src="./assets/images/FTA/FTA_diag.jpg" frameborder="0" allowfullscreen></iframe>
+    </section> -->
+
+    <section id="portfolio">
+        <div class="container">
+            <button onclick="window.location.href='index.html'" class="back-button">&larr; Back Home</button>
+            <button onclick="window.location.href='music-fairy-tales.html'" class="back-button">Music Fairy tales &rarr;</button>
+            <button onclick="window.location.href='scale-be-scaled.html'" class="back-button">Scale or Be Scaled &rarr;</button>
+            <button onclick="window.location.href='marmortal.html'" class="back-button">Marmortal &rarr;</button>
+
+            <div class="portfolio-item theme1">
+                <h1 style="color: #102F5B;">Foreign Language Text Analyzer</h1>
+                <h3 style="color: #102F5B;">Personal Project | 2024</h3>
+                <div class="links">
+                    <a href="https://github.com/TheReverseSide/Language-Text-Frequency/" target="_blank" style="margin-right: 20px;">
+                        <i class="fab fa-github github-icon"></i>  Check it out on Github   
+                    </a>
+                    <a href="https://colab.research.google.com/drive/1O2o1Y_GbHvCEnuYjrl1yH2THX0Q4XdoX?usp=sharing" target="_blank">
+                        <i class="fa fa-external-link-alt"></i>  Data visualizations here
+                    </a>
+                </div>
+                <br>
+                
+                <div class="portfolio-info">
+                    <div class="tags">
+                        <span class="tag tag-programming">Python</span>
+                        <span class="tag tag-programming">spaCy</span>
+                        <span class="tag tag-programming">Matplotlib</span>
+                        <span class="tag tag-programming">Pandas</span>
+                        <span class="tag tag-programming">Plotly</span>
+                    </div>
+                    <br>
+
+                    <p>The program takes a foreign-language PDF and processes the words, creating a frequency list accompanied with an example sentence of that word. 
+                        From there, the CSV file can be easily imported into <a href="https://apps.ankiweb.net/" target="_blank">Anki flashcards</a> for memorization.
+                    </p>
+                    <br>
+                    <p>
+                        Once processed, I can view the difficulty of a book at a glance, and use the interactive bar chart below to review most-frequent vocabularly.
+                        Looking above, though technically I know a higher number of words in El Pasaje, Percy Jackson and Harry Potter should be considered much easier due to their vastly smaller vocabulary used.
+                    </p>
+                    
+                </div>
+                <br>
+
+                <div class="portfolio-item img">
+                    <img src="./assets/images/FTA/GridChart.png" alt="A map of player flow and narrative - informed by previous user research." class="clickable">
+                    <p class="caption">Waffle chart visualizing known/unknown words per book</p>
+                    <br>
+
+                    <img src="./assets/lesug.gif" alt="An example of the output" class="clickable">
+                    <p class="caption">Interactive bar chart of vocabulary frequency</p>
+                    <br>
+
+                    <img src="./assets/images/FTA/FTA_diag.jpg" alt="Alt text" class="clickable">
+                    <p class="caption">A flow chart of how the program works</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var images = document.getElementsByClassName("clickable");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+
+        for (var i = 0; i < images.length; i++) {
+            images[i].onclick = function(){
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        span.onclick = function() { 
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal content, close the modal
+        modal.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
