@@ -10,6 +10,15 @@ a {
     color: #102F5B;
 }
 
+a:hover {
+    color: #FA4D0D;
+}
+
+a:active {
+    color: #FA4D0D;
+}
+
+
 .about-content {
     align-items: center;
     display: flex;
@@ -36,7 +45,11 @@ a {
 }
 
 .back-button:hover {
-    background-color: #0d2345;
+    background-color: #FA4D0D;
+}
+
+.back-button:active {
+    background-color: #FA4D0D;
 }
 
 body {
@@ -122,10 +135,10 @@ footer a:hover {
 .learn-more-button {
     background-color: #1B4371; /* You can change this to your preferred color */
     color: white;
-    text-transform: uppercase;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
+    text-transform: uppercase;
     font-size: 0.9em;
     font-weight: bold;
     margin-left: 10px;
@@ -133,7 +146,13 @@ footer a:hover {
 }
 
 .learn-more-button:hover {
-    background-color: #1B4371; /* Darker shade on hover */
+    background-color: #FA4D0D; /* Darker shade on hover */
+    color: white;
+}
+
+.learn-more-button:active {
+    background-color: #FA4D0D; /* Darker shade on hover */
+    color: white;
 }
 
 .links {
@@ -356,7 +375,7 @@ footer a:hover {
 /* Project themes */
 #about {
     background: #f1f1f1;
-    padding: 4em 0;
+    padding: 2em 0 0 0;
     text-align: center;
 }
 
@@ -409,3 +428,41 @@ footer a:hover {
     cursor: pointer;
     text-decoration: none;
 }
+
+.filter-project {
+    display: block; /* Show all projects by default */
+  }
+  .filter-project:not(.active) {
+    display: none; /* Hide projects that are not active during filtering */
+  }
+  .buttons {
+    margin-bottom: 20px;
+  }
+  button {
+    margin-right: 10px;
+  }
+  .filter-button {
+      background-color: #1B4371; /* Default button background */
+      color: white; /* Default button text color */
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      text-transform: uppercase;
+      font-size: 0.9em;
+      font-weight: bold;
+  }
+
+  .filter-button:hover {
+      background-color: #204878; /* Darker shade on hover */
+      transform: scale(1.05); /* Slightly larger on hover */
+  }
+
+  .filter-button.active {
+      background-color: #FA4D0D; /* Highlight color for active filter */
+      color: white;
+      font-weight: bold;
+  }
