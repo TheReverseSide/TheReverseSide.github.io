@@ -428,6 +428,14 @@ footer a:hover {
     cursor: pointer;
     text-decoration: none;
 }
+.smaller-80-image{
+    width: 80%;
+    height:auto;
+}
+.smaller-50-image{
+    width: 50%;
+    height:auto;
+}
 
 .filter-project {
     display: block; /* Show all projects by default */
