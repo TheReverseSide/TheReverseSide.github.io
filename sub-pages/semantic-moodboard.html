@@ -8,15 +8,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <section id="hero" class="hero-video">
+    <!-- <section id="hero" class="hero-video">
         <iframe src="https://www.youtube.com/embed/LshJXdmBMsM" frameborder="0" allowfullscreen></iframe>
-    </section>
+    </section> -->
 
     <section id="portfolio">
         <div class="container">
             <div class="portfolio-item theme1">
+                <a href="../index.html" class="filter-button" style="margin-bottom: 20px; display: inline-block;">← Back to Portfolio</a>
                 <h1 style="color: #102F5B;">Semantic Moodboard of "Freedom"</h1>
                 <h3 style="color: #102F5B;">Personal Project | 2025</h3>
+                <div class="links">
+                    <a href="https://github.com/TheReverseSide/SemanticMoodboard" target="_blank" style="margin-right: 20px;">
+                        <i class="fab fa-github github-icon"></i>  Check it out on Github</a>
+                </div>
                 <div class="portfolio-info">
                     <h3>The Point</h3>
                     <p>I wanted to explore what freedom means across cultures.</p>
@@ -78,21 +83,34 @@
 
                     <br>
                     <h3>Findings & Reflection</h3>
-                    <!-- To be added -->
-                    <img src="../assets/images/MFT/MFT_7.jpg" alt="Fantasy instruments encourage children to create music together and recognize emotions" class="sub-page-image clickable">
-                    <p class="caption">A child testing the Fantasy Instrument. Sometimes the experience is guided by a teacher or therapist.</p>
-
-                    <img src="../assets/images/MFT/MFT_6.jpg" alt="Painting allows up to 8 children to create a scene together, accompanied by classic music" class="sub-page-image clickable">
-                    <p class="caption">Fantasy Painting encourages children to create music together and recognize emotions.</p>
-
                     <br>
-                    <h3>Interpretation</h3>
-                    <!-- To be added -->
+                    <p><b>On “be” as a cross-linguistic anchor:</b></p>
+                    <p>We can see that be is by far the most common co-word across three of the four languages. This likely reflects phrases like freedom is important, freedom is a right, and so on — framing freedom as a state of being or existence. It’s a reminder of how universally we anchor freedom in identity and condition, regardless of the language.</p>
+                    
+                    <img src="../assets/images/SemanticMoodboard/coword_heatmap.png" alt="This heatmap shows the frequency of co-words across different languages." class="sub-page-image clickable">
+                    <p class="caption">This heatmap shows the frequency of co-words across different languages. Darker colors indicate higher frequency of usage.</p>
+                    
+                    <br>
+                    <p><b>English’s action-oriented framing:</b></p>
+                    <p>English stands out for its heavy use of words like fight, more, and do. In fact, English accounts for over 80% of the uses of fight and more, hinting at a conceptualization of freedom as something to be expanded and actively fought for. The strong presence of do further suggests that English frames freedom in terms of action — freedom to do X, to do Y — a subtle but telling difference.</p>
+                    
+                    <img src="../assets/images/SemanticMoodboard/coword_barchart.png" alt="This bar chart displays the most frequently used co-words with 'freedom' across all languages combined." class="sub-page-image clickable">
+                    <p class="caption">This bar chart displays the most frequently used co-words with 'freedom' across all languages combined.</p>
+                    
+                    <br>
+                    <p><b>Spanish and Italian: expression as a key theme:</b></p>
+                    <p>One of the most striking patterns is how frequently expression appears in Spanish, often as part of la libertad de expresión. Italian shows this to a lesser extent too, which could suggest that this phrase is culturally or legally more prominent in Romance languages. It’s a small but fascinating clue about the values woven into the fabric of these languages’ discourse around freedom.</p>
+
+                    <img src="../assets/images/SemanticMoodboard/barcharts_languages.png" alt="This table shows the raw aggregated data used to create the visualizations. Each row represents a unique co-word and language combination with its frequency count." class="sub-page-image clickable">
+                    <p class="caption">This table shows the raw aggregated data used to create the visualizations. Each row represents a unique co-word and language combination with its frequency count.</p>
+
 
                     <br>
                     <h3>Challenges & Lessons</h3>
                     <ul>
                         <li>Sadly, there wasnt enough data on Swedish for a meaningful comparison, so I had to drop it</li>
+                        <li>A bit naively I thought I could use the same semantic analysis with SpaCy, but it turned out that German needed its own protocol since its grammatically pretty distinct. I think I would get even more accurate results with dedicated protocols for Spanish, English and Italian, but its still on my todo list.</li>
+                        <li>I pulled a over a thousand sentences for Tatoeba, but for much more depth I would love to access data from varying sources, and preferably thousands of entries per language.</li>
                     </ul>
                 </div>
             </div>
