@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Moodboard</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <section id="hero" class="hero-video">
+        <iframe src="https://www.youtube.com/embed/LshJXdmBMsM" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <section id="portfolio">
+        <div class="container">
+            <div class="portfolio-item theme1">
+                <h1 style="color: #102F5B;">Semantic Moodboard of "Freedom"</h1>
+                <h3 style="color: #102F5B;">Personal Project | 2025</h3>
+                <div class="portfolio-info">
+                    <h3>The Point</h3>
+                    <p>I wanted to explore what freedom means across cultures.</p>
+                    <p>As an American, I’ve noticed how often we use “freedom” in vague, broad, and sometimes contradictory ways. My European friends often tease me about it—so I thought: let’s actually look at how “freedom” is used in different languages. Where do definitions across languages agree, and where do they collide?</p>
+
+                    <div class="portfolio-box theme1-box">
+                        <h3><i class="fas fa-lightbulb"></i> Why Freedom?</h3>
+                        <p class="tab">Well, to me it feels like one of the most emotionally charged words we use, and this has only increased in the age of protests, lockdowns and widespread political polarization. Freedom feels like contested ground.</p>
+                    </div>
+                    
+                    <br>
+                    <h3>Approach</h3>
+                    <p>I wanted to scale gradually—starting with clean data and controlled analysis before diving into messier, real-world language. I gathered sentences from native speakers, focusing on the five languages I understand: English, German, Spanish, Italian, and Swedish.</p>
+                    <br>
+                    <p>I started with Tatoeba.org, a database of sentences translated by native speakers. Tatoeba has limitations—short, context-less sentences—but the advantage is availability of data. Plus, it supports exact keyword search. I wrote a small script using Selenium to automatically gather sentences across five languages, with throttling and respectful delays.</p>
+                    <br>
+                    <p>After gathering the data, we can then analyze it and hopefully find some insights</p>
+                    <br>
+                    <p>My assumptions for English, freedom would sound:</p>
+                    <ul>
+                        <li>Militaristic verbs: fight for freedom, defend our freedom, sacrifices for freedom</li>
+                        <li>Rights discourse: free speech, second amendment</li>
+                        <li>Demands: more freedom, retain existing freedom</li>
+                        <li>Emotionally intense sentiment, especially around loss or struggle</li>
+                    </ul>
+                    
+                    <br>
+                    <h3>Process & Methods</h3>
+                    <ol>
+                        <li>Scraped Tatoeba for translated sentences of “freedom,” filtering by minimum sentence length.</li>
+                        <li>Deduplicated semantically using sentence-transformers and cosine similarity to avoid near-duplicate noise.</li>
+                        <li>Performed dependency parsing with SpaCy, extracting relationships: subjects, objects, modifiers, prepositional links, and coordinated terms.</li>
+                        <li>Translated co-words into English via DeepL, caching results for performance.</li>
+                        <li>Exported a unified CSV for analysis and visualization in Tableau.</li>
+                    </ol>
+                    
+                    <br>
+                    <h3>Tools</h3>
+                    <div class="tags">
+                        <span class="tag tag-programming">Selenium</span>
+                        <span class="tag tag-programming">SpaCy</span>
+                        <span class="tag tag-programming">Sentence-Transformers</span>
+                        <span class="tag tag-programming">DeepL API</span>
+                        <span class="tag tag-programming">Python</span>
+                        <span class="tag tag-programming">Plotly/Dash</span>
+                    </div>
+                    <ul>
+                        <li><b>Selenium:</b> to gather native-level sentence data from Tatoeba</li>
+                        <li><b>SpaCy:</b> to extract syntactic and semantic relationships between words</li>
+                        <li><b>Hugging Face Transformers:</b> to score sentence tone across multiple languages</li>
+                        <li><b>Tableau:</b> for interactive dashboards across dimensions like POS, co-word, sentiment</li>
+                    </ul>
+                    <div class="portfolio-box theme1-box">
+                        <h3><i class="fas fa-lightbulb"></i> Why dependency parsing matters:</h3>
+                        <p class="tab">Some keyword-based text analysis just looks for nearby words (window-based co-occurrence), but depedency parsing lets you extract grammatically meaningful relationships.This means our analysis provides greater depth and meaning than simply looking for the words that are nearby.</p>
+                        <br>
+                        <p class="tab">Roughly speaking, this is similar to the difference between early AI and modern LLMs. In the past, AI also looked for words that appeared near each other and used that for predictions, nowadays LLMs are so much better because they model the relationships between words, not just what is nearby.</p>
+                    </div>
+
+                    <br>
+                    <h3>Findings & Reflection</h3>
+                    <!-- To be added -->
+                    <img src="../assets/images/MFT/MFT_7.jpg" alt="Fantasy instruments encourage children to create music together and recognize emotions" class="sub-page-image clickable">
+                    <p class="caption">A child testing the Fantasy Instrument. Sometimes the experience is guided by a teacher or therapist.</p>
+
+                    <img src="../assets/images/MFT/MFT_6.jpg" alt="Painting allows up to 8 children to create a scene together, accompanied by classic music" class="sub-page-image clickable">
+                    <p class="caption">Fantasy Painting encourages children to create music together and recognize emotions.</p>
+
+                    <br>
+                    <h3>Interpretation</h3>
+                    <!-- To be added -->
+
+                    <br>
+                    <h3>Challenges & Lessons</h3>
+                    <ul>
+                        <li>Sadly, there wasnt enough data on Swedish for a meaningful comparison, so I had to drop it</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var images = document.getElementsByClassName("clickable");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+
+        for (var i = 0; i < images.length; i++) {
+            images[i].onclick = function(){
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        span.onclick = function() { 
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal content, close the modal
+        modal.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
