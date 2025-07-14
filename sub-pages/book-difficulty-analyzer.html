@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Difficulty Analyzer</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <section id="portfolio">
+        <div class="container">
+
+            <div class="portfolio-item theme1">
+                <a href="../index.html" class="filter-button" style="margin-bottom: 20px; display: inline-block;">← Back to Portfolio</a>
+                <h1 style="color: #102F5B;">Book Difficulty Analyzer</h1>
+                <h3 style="color: #102F5B;">Personal Project</h3>
+                <div class="links">
+                    <a href="https://github.com/TheReverseSide/language-grammar-flashcard-generator" target="_blank" style="margin-right: 20px;">
+                        <i class="fab fa-github github-icon"></i>  Check it out on Github</a>
+                </div>
+                <br>
+                
+                <div class="portfolio-info">
+                    <div class="tags">
+                        <span class="tag tag-programming">Python</span>
+                        <span class="tag tag-programming">OpenAI API</span>
+                        <span class="tag tag-programming">DeepL</span>
+                        <span class="tag tag-programming">ElevenLabs</span>
+                        <span class="tag tag-programming">Anki</span>
+                    </div>
+                    <br>
+                    
+                    <p>
+                        I made this as a tool as an alternative to reading through a grammar book. 
+                        It generates flashcards tailored to the difficulty level specified by the user, a translation, audio, and a grammar question and answer, 
+                        and a fun-fact about that particular sentence structure.
+                    </p>
+                    <br>
+                    <p>The user sets:</p>
+                    <ol>
+                        <li>How many flashcards to generate</li>
+                        <li>The difficulty level of the question (such as A1, B2, etc. The user can also set a multiple difficulties (ex: A1, A2, B2))</li>
+                        <li>The language they are learning</li>
+                        <li>The desired language of the translations</li>
+                    </ol>
+                    <br>
+                    <p>The rest will be handled automatically.</p>
+                    <p>The user can also customize the instructions sent to the agent if they wish. There are language-specific instructions that can be appended 
+                        for fine-grained control (for example, I included a list of grammar concepts that I would like covered at different difficulty levels.)</p>
+                    
+                    <div class="portfolio-box theme1-box">
+                        <span class="highlight-project1">How do we know we can trust what AI produces?</span><p>This is a crucial question - 
+                            since we are language learners, most of the time we wont recognize mistakes since we havent learned the language well enough.</p>
+                        <br>
+                        <p>To answer this (at least for German) I sent a small survey out to some German 
+                            native speakers, and asked them to evaluate 1) If the senteces are proper, correct German, and 2) Is the sentence appropriate for the language level.</p>
+
+                        <br>
+                        <p>Their answers were encouragingly positive! They rated all sentences (~20) as appropriate for the specified difficulty level, and only a few sentences had minor errors.</p>
+                    </div>
+                    
+                    <br>
+                    <p>After the user sets their preferences, the program splits the number of desired flashcards evenly, and uses a combination of 
+                        OpenAI API, DeepL Translations, and ElevenLabs Text-To-Speech (TTS) to generate the following:</p>
+                    <ol>
+                        <li>A sentence suitable for the difficulty level</li>
+                        <li>A grammar question & answer pair, suitable for the difficulty level</li>
+                        <li>Audio file of the sentence being spoken, which is automatically added to the users Anki Media folder (so cards can access it)</li>
+                        <li>A ready-to-import <a href="https://apps.ankiweb.net/" target="_blank">Anki</a> deck for each difficulty level specified, 
+                            making it easy to focus on grammar at each stage of the language learning process.</li>
+                    </ol>         
+                    <p></p>
+                    <br>
+                </div>
+                
+                
+
+                <br>
+
+                <div class="portfolio-item img">
+                    <img src="../assets/images/GrammarGeneration/Grammar Flashcard Generator.jpg" alt="Chart for word freq" class="clickable">
+                    <p class="caption">A flow chart of how the program works</p>
+                </div>
+                <div class="portfolio-item img">
+                    <div style="display: flex; gap: 5px; align-items: center;">
+                        <img src="../assets/images/GrammarGeneration/anki_grammar_front.jpg" alt="Front of flashcard" class="clickable" style="width: 200px; height: auto;">
+                        <img src="../assets/images/GrammarGeneration/anki_grammar_back.jpg" alt="Back of flashcard" class="clickable" style="width: 200px; height: auto;">
+                    </div>
+                    <p class="caption">An example of the imported Anki cards (Front, Back) using the template I provided</p>
+                    </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var images = document.getElementsByClassName("clickable");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+
+        for (var i = 0; i < images.length; i++) {
+            images[i].onclick = function(){
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        span.onclick = function() { 
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal content, close the modal
+        modal.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>

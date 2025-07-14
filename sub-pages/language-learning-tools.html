@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Learning Tools</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    
+    <section id="hero">
+        <img src="../assets/images/out-0.png" alt="Hero Image">
+    </section>
+    
+    <div class="container" style="padding-top: 20px;">
+        <a href="../index.html" class="home-button">
+            <i class="fas fa-home"></i>
+            Home
+        </a>
+    </div>
+
+    <section id="about">
+        <div class="container">
+            <div class="section" style="color:black; font-weight: normal; background: #ffffff;">
+                <h1>Language Learning Tools</h1>
+                <p>Collection of Language learning tools I have made to help me pick up languages</p>
+                <br>
+            </div>
+        </div>
+    </section>
+    
+    <section id="portfolio">
+        <div class="container">
+            
+            <div class="portfolio-item theme1">
+                <div class="portfolio-info">
+                    <div class="title-container">
+                        <h1><a href="./grammar-flashcard-generator.html">Grammar Flashcard generator</a></h1>
+                    </div>
+                    <h3>Personal Project | 2025</h3>
+                    <div class="portfolio-box theme1-box">
+                        <span class="highlight-project1">What is it? </span><p style="display: inline;">A program that generates grammar flashcards with audio and translations based on user preferences</p>
+                        <br>
+                        <span class="highlight-project1">Tools used: </span><p style="display: inline;">OpenAI API, DeepL, ElevenLabs, Python, Anki</p>
+                    </div>
+                    <br>
+                    <div>
+                        <a href="./grammar-flashcard-generator.html" class="learn-more-button">Learn more</a>
+                    </div>
+                    <br>
+                    <div class="portfolio-item img">
+                        <img src="../assets/images/GrammarGeneration/Grammar Flashcard Generator.jpg" alt="Chart for word freq" class="clickable">
+                        <p class="caption">A flow chart of how the program works</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="portfolio-item theme1">
+                <div class="portfolio-info">
+                    <div class="title-container">
+                        <h1><a href="./book-difficulty-analyzer.html">Book Difficulty Analyzer</a></h1>
+                    </div>
+                    <h3>Personal Project | 2025</h3>
+                    <div class="portfolio-box theme1-box">
+                        <span class="highlight-project1">What is it? </span><p style="display: inline;">A tool that will analyze a book, compare it to your (Anki) vocabulary, 
+                            and create visualizations of how many known/unknown words there are, as well as a frequency chart of unknown words. Can generate an 'Book Deck' 
+                            of Anki flashcards for the book in question to help you get up and running.</p>
+                        <br>
+                        <span class="highlight-project1">Tools used: </span><p style="display: inline;">Python, Sentence Transformers, Spacy, Selenium, Plotly, Dash</p>
+                    </div>
+                    <br>
+                    <div>
+                        <a href="./book-difficulty-analyzer.html" class="learn-more-button">Learn more</a>
+                    </div>
+                    <br>
+                    <div class="portfolio-item img">
+                        <img src="../assets/lesug.gif" alt="An example of the output" class="clickable">
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p><i class="fas fa-user"></i> Brandon Startz</p>
+            <p><a href="../assets/Startz_CV.pdf"><i class="fa fa-external-link-alt"></i> CV</a></p>
+            <p><a href="https://github.com/TheReverseSide/" target="_blank" style="justify-content: center;">
+                    <i class="fab fa-github github-icon"></i> Github</a></p>
+            <p><a href="mailto:brandon.startz@gmail.com"><i class="fas fa-envelope"></i> brandon.startz@gmail.com</a></p>
+            <p><a href="https://www.linkedin.com/in/brandon-startz-40b277133/" target="_blank"><i class="fab fa-linkedin"></i> linkedin/brandon-startz-40b277133</a></p>
+        </div>
+    </section>
+
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        var modal = document.getElementById("myModal");
+
+        var images = document.getElementsByClassName("clickable");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+
+        for (var i = 0; i < images.length; i++) {
+            images[i].onclick = function(){
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+        }
+
+        var span = document.getElementsByClassName("close")[0];
+
+        span.onclick = function() { 
+            modal.style.display = "none";
+        }
+
+        modal.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const projects = document.querySelectorAll('.filter-project');
+            projects.forEach(project => project.classList.add('active'));
+        });
+
+        function filterProjects(category, button) {
+            const projects = document.querySelectorAll('.filter-project');
+            const buttons = document.querySelectorAll('.filter-button');
+
+            projects.forEach(project => {
+                if (category === 'all' || project.classList.contains(category)) {
+                    project.classList.add('active');
+                } else {
+                    project.classList.remove('active');
+                }
+            });
+
+            buttons.forEach(btn => btn.classList.remove('active'));
+            if (button) button.classList.add('active');
+        }
+
+    </script>
+</body>
+</html>
