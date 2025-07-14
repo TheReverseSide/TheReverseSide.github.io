@@ -1,16 +1,28 @@
 /* https://cssgradient.io/ */
 
 :root {
+    /* Main color palette */
     --primary-color: #1B4371;
-    --secondary-color: #2980b9;
+    --primary-dark: #102F5B;
+    --primary-light: #2980b9;
     --accent-color: #1e3a5f;
+    
+    /* Consistent highlight colors */
+    --highlight-color: #E67E22;        /* Main orange for hovers */
+    --highlight-light: #F39C70;        /* Lighter orange for subtle highlights */
+    --highlight-dark: #D35400;         /* Darker orange for active states */
+    
+    /* Text and background */
     --text-color: #333;
+    --text-light: #666;
     --background-color: #f4f4f4;
     --white: #fff;
+    
+    /* Utilities */
     --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 6px 12px rgba(0, 0, 0, 0.15);
     --border-radius: 5px;
     --transition: 0.3s ease;
-    --highlight-color: #f39370;
     
     /* Font sizes */
     --font-size-small: 14px;
@@ -26,7 +38,8 @@
 }
 
 a {
-    color: #102F5B;
+    color: var(--primary-dark);
+    transition: var(--transition);
 }
 
 a:hover {
@@ -34,17 +47,32 @@ a:hover {
 }
 
 a:active {
-    color: var(--highlight-color);
+    color: var(--highlight-dark);
+}
+
+/* Accessibility improvements - Focus states */
+a:focus,
+.back-button:focus,
+.learn-more-button:focus,
+.filter-button:focus {
+    outline: 2px solid var(--highlight-color);
+    outline-offset: 2px;
+}
+
+/* Enhanced button focus states */
+button:focus-visible {
+    outline: 2px solid var(--highlight-color);
+    outline-offset: 2px;
 }
 
 ul {
     padding-left: 3em;
-    color: black;
+    color: var( --text-color);
 }
 
 ol {
     padding-left: 3em;
-    color: black;
+    color: var( --text-color);
 }
 
 .tab {
@@ -63,7 +91,7 @@ ol {
 }
 
 .back-button {
-    background-color: #102F5B;
+    background-color: var(--primary-dark);
     border: none;
     border-radius: 5px;
     color: #fff;
@@ -81,14 +109,28 @@ ol {
 }
 
 .back-button:active {
-    background-color: var(--highlight-color);
+    background-color: var(--highlight-dark);
 }
 
 body {
-    background: #f4f4f4;
+    background: #f1f1f1;
     color: #333;
     font-family: 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
+}
+
+/* Header link styling */
+.portfolio-info h1 a,
+.portfolio-info h2 a {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.portfolio-info h1 a:hover,
+.portfolio-info h2 a:hover {
+    color: var(--highlight-color);
+    text-decoration: underline;
 }
 
 .caption {
@@ -104,12 +146,19 @@ body {
 
 .clickable { /* not actually clickable */
     border: 5px solid #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
     display: block;
     width: 100%;
     max-width: 800px;
     margin: 10px auto;
     object-fit: cover;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.clickable:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
 }
 
 .container {
@@ -138,8 +187,17 @@ footer a:hover {
     color: black;
 }
 
+.contact-links a {
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.contact-links a:hover {
+    text-decoration: underline;
+}
+
 .highlight-project1 {
-    color: #102F5B;
+    color: var(--primary-dark);
     font-weight: bold;
 }
 
@@ -166,7 +224,7 @@ footer a:hover {
 }
 
 .learn-more-button {
-    background-color: #1B4371; /* You can change this to your preferred color */
+    background-color: var(--primary-color);
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -175,16 +233,16 @@ footer a:hover {
     font-size: 0.9em;
     font-weight: bold;
     margin-left: 10px;
-    
+    transition: var(--transition);
 }
 
 .learn-more-button:hover {
-    background-color: #FA4D0D;
+    background-color: var(--highlight-color);
     color: white;
 }
 
 .learn-more-button:active {
-    background-color: #FA4D0D;
+    background-color: var(--highlight-dark);
     color: white;
 }
 
@@ -227,8 +285,8 @@ footer a:hover {
 }
 
 .portfolio-info p {
-    color: black;
-    line-height: 1.4;
+    color: var(--text-color);
+    line-height: 1.5;
 }
 
 .portfolio-item img {
@@ -267,7 +325,6 @@ footer a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
     color: white;
     font-weight: bold;
-    margin-bottom: 2em;
     padding: 1.5em;
     text-align: center;
 }
@@ -307,11 +364,11 @@ footer a:hover {
 }
 
 .theme1 .portfolio-info {
-    color: #102F5B;
+    color: var(--primary-dark);
 }
 
 .theme1-box {
-    border: 2px solid #102F5B;
+    border: 2px solid var(--primary-dark);
 }
 
 .title-container {
@@ -410,7 +467,7 @@ footer a:hover {
 /* Project themes */
 #about {
     background: #f1f1f1;
-    padding: 2em 0 0 0;
+    padding: 2em 0 2em 0;
     text-align: center;
 }
 
@@ -485,7 +542,7 @@ footer a:hover {
     margin-right: 10px;
   }
   .filter-button {
-      background-color: #1B4371;
+      background-color: var(--primary-color);
       color: white;
       border: none;
       padding: 10px 20px;
@@ -500,12 +557,12 @@ footer a:hover {
   }
 
   .filter-button:hover {
-      background-color: #204878;
+      background-color: var(--primary-dark);
       transform: scale(1.05);
   }
 
   .filter-button.active {
-      background-color: #f0a990;
+      background-color: var(--highlight-color);
       color: white;
       font-weight: bold;
   }
@@ -577,4 +634,92 @@ footer a:hover {
     .clickable {
         max-width: 900px;
     }
+}
+
+/* Project category headers */
+.category-header {
+    margin: 3em 0 2em 0;
+    text-align: left;
+    position: relative;
+}
+
+.category-header h2 {
+    color: var(--primary-color);
+    font-size: 1.8em;
+    font-weight: 600;
+    margin: 0;
+    padding-bottom: 0.5em;
+    position: relative;
+    display: inline-block;
+}
+
+.category-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color) 0%, var(--highlight-color) 100%);
+    border-radius: 2px;
+}
+
+.category-header .separator-line {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, var(--primary-color) 0%, transparent 50%);
+    margin-top: 0.5em;
+    opacity: 0.3;
+}
+
+/* First category header */
+.category-header:first-of-type {
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    .category-header {
+        margin: 2em 0 1.5em 0;
+    }
+    
+    .category-header h2 {
+        font-size: 1.5em;
+    }
+}
+
+/* Home button styling */
+.home-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: var(--font-size-medium);
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+}
+
+.home-button:hover {
+    background-color: var(--highlight-color);
+    color: white;
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+}
+
+.home-button:active {
+    background-color: var(--highlight-dark);
+}
+
+.home-button:focus {
+    outline: 2px solid var(--highlight-color);
+    outline-offset: 2px;
+}
+
+.home-button i {
+    font-size: 1.1em;
 }
