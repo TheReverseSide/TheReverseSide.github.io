@@ -40,40 +40,44 @@
                     <p>
                         I made this as a tool as an alternative to reading through a grammar book. 
                         It generates flashcards tailored to the difficulty level specified by the user, a translation, audio, and a grammar question and answer, 
-                        and a fun-fact about that particular sentence structure.
+                        and a fun-fact about that particular sentence structure (such as phrasal verbs, or common expressions).
                     </p>
                     <br>
                     <p>The user sets:</p>
                     <ol>
                         <li>How many flashcards to generate</li>
-                        <li>The difficulty level of the question (such as A1, B2, etc. The user can also set a multiple difficulties (ex: A1, A2, B2))</li>
+                        <li>The difficulty level of the question according to CEFR scale. (Such as A1, B2, etc. The user can also set a multiple difficulties (ex: A1, A2, B2))</li>
                         <li>The language they are learning</li>
                         <li>The desired language of the translations</li>
                     </ol>
                     <br>
                     <p>The rest will be handled automatically.</p>
-                    <p>The user can also customize the instructions sent to the agent if they wish. There are language-specific instructions that can be appended 
-                        for fine-grained control (for example, I included a list of grammar concepts that I would like covered at different difficulty levels.)</p>
+                    <p>The user can also customize the instructions sent to the agent if they wish. There are also language-specific instructions that can be appended 
+                        for fine-grained control (for example, I included a list of grammar concepts that I would like covered at different difficulty levels for German.)</p>
                     
                     <div class="portfolio-box theme1-box">
                         <span class="highlight-project1">How do we know we can trust what AI produces?</span><p>This is a crucial question - 
                             since we are language learners, most of the time we wont recognize mistakes since we havent learned the language well enough.</p>
                         <br>
                         <p>To answer this (at least for German) I sent a small survey out to some German 
-                            native speakers, and asked them to evaluate 1) If the senteces are proper, correct German, and 2) Is the sentence appropriate for the language level.</p>
-
+                            native speakers (n=8), and asked them to evaluate:</p>
+                        <ol>
+                            <li>If the sentences are proper, grammatically correct German</li>
+                            <li>If the sentences are an appropriate difficulty for the stated CEFR language level</li>
+                        </ol>
                         <br>
-                        <p>Their answers were encouragingly positive! They rated all sentences (~20) as appropriate for the specified difficulty level, and only a few sentences had minor errors.</p>
+                        <p>Their answers were encouragingly positive! They rated all sentences (~15) as either mostly-appropriate or completely-appropriate for the specified difficulty level, and only a few sentences had minor errors. 
+                            These minor errors only occured at a C1, near-native level. A1-B2 level sentences were considered perfect by native reviewers.</p>
                     </div>
                     
                     <br>
-                    <p>After the user sets their preferences, the program splits the number of desired flashcards evenly, and uses a combination of 
+                    <p>After the user sets their preferences, the program splits the number of desired flashcards evenly according to how many difficulty levels the user set, and uses a combination of 
                         OpenAI API, DeepL Translations, and ElevenLabs Text-To-Speech (TTS) to generate the following:</p>
                     <ol>
                         <li>A sentence suitable for the difficulty level</li>
                         <li>A grammar question & answer pair, suitable for the difficulty level</li>
                         <li>Audio file of the sentence being spoken, which is automatically added to the users Anki Media folder (so cards can access it)</li>
-                        <li>A ready-to-import <a href="https://apps.ankiweb.net/" target="_blank">Anki</a> deck for each difficulty level specified, 
+                        <li>A ready-to-import <a href="https://apps.ankiweb.net/" target="_blank">Anki</a> deck for each specified difficulty level, 
                             making it easy to focus on grammar at each stage of the language learning process.</li>
                     </ol>         
                     <p></p>
